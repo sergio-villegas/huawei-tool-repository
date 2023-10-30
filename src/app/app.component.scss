@@ -1,0 +1,64 @@
+#navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.main-content-body
+{
+  margin-top: 60px;
+}
+
+.top-navbar {
+    width: 100%;
+    overflow: auto;
+    display: flex;
+    align-items: center;
+  }
+  
+.img-huawei {
+  float: left;
+  margin-right: 35px;
+  margin-left: 35px;
+}
+
+
+.container-huawei-repository-element-box {
+  width: 23%;
+  margin: 1%;
+  display: inline-block;
+  border: 5px solid grey;
+  border-radius: 8px;
+  padding: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-align: left;
+  background-color: #F5F5F5;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s;
+}
+
+.container-huawei-repository-element-box:nth-child(4n) {
+  margin-right: 0;
+}
+
+.separator {
+  border-top: 3px solid grey;
+  margin: 15px 0;
+}
+
+.blue-button {
+  background-color: #1e90ff;
+  color: azure;
+  padding: 3px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+}
+
+.blue-button:hover {
+  background-color: #005bb5;
+}
