@@ -1,4 +1,3 @@
-
 <nav class="navbar bg-dark" id="navbar">
     <div class="top-navbar">
         <img class="img-huawei" src="../assets/img/huawei.png" width="50" height="50">
@@ -6,15 +5,39 @@
     </div>
 </nav>
 
+<div class="formularioContainer">
+    <form (submit) = "onSubmitContainerForm()">
+        <label for="elementName" class="custom-label"><strong>Container name:</strong></label>
+        <input type="text" id="elementName" name="elementName" class="custom-input-large" 
+        [(ngModel)]="elementName" required placeholder="Enter the name of your container..."><br><br>
+
+
+        <label for="user" class="custom-label"><strong>User:</strong></label>
+        <input type="text" id="user" name="user" class="custom-input-short-separation" 
+        [(ngModel)]="user" required placeholder="Enter your user ID...">
+
+        <label for="date" class="custom-label"><strong>Date:</strong></label>
+        <input type="date" id="date" name="date" class="custom-input-short-separation" 
+        [(ngModel)]="date" required>
+
+        <label for="workArea" class="custom-label"><strong>Work Area:</strong></label>
+        <input type="text" id="workArea" name="workArea" class="custom-input-short" 
+        [(ngModel)]="workArea" required placeholder="Enter your working area..."><br><br>
+
+        <input type="submit" class="blue-button-creation" value="Submit">
+    </form>
+</div>
+
+
 <div class="main-content-body">
     <div *ngFor="let container of containers" class="container-huawei-repository-element-box">
-        <h3><strong>Element Name:</strong> {{ container.elementName }}</h3>
+        <h3><strong>Element Name:</strong> {{ this.container.elementName }}</h3>
         <div class="separator"></div>
-        <p><strong>User:</strong> {{ container.user }}</p>
-        <p><strong>Date:</strong> {{ container.date }}</p>
-        <p><strong>Work Area:</strong> {{ container.workArea }}</p>
+        <p><strong>User:</strong> {{ this.container.user }}</p>
+        <p><strong>Date:</strong> {{ this.container.date }}</p>
+        <p><strong>Work Area:</strong> {{ this.container.workArea }}</p>
         <button class="blue-button">
             Details <i class="bi bi-search"></i>
-          </button>
+        </button>
     </div>
 </div>
