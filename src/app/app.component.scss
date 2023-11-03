@@ -27,19 +27,37 @@
   margin: 15px 0;
 }
 
-.blue-button {
-  background-color: #1e90ff;
+
+.blue-button, .red-button
+{
   color: azure;
   padding: 3px 10px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  display: block;
-  margin: 0 auto;
+  display: inline-block;
+}
+
+.blue-button {
+  background-color: #2373c3;
+  margin-right: 10px;
 }
 
 .blue-button:hover {
   background-color: #005bb5;
+}
+
+.red-button {
+  background-color: #e12121;
+  margin-left: 10px;
+}
+
+.red-button:hover {
+  background-color: #ca0b0b;
+}
+
+.button-container {
+  text-align: center;
 }
 
 .button-add-container {

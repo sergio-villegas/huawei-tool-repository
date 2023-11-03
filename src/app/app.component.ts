@@ -53,4 +53,8 @@ export class AppComponent {
   resetContainerForm() {
     this.containerForm.reset();
   }
+
+  deleteContainer(index: number) {
+    this.containers.splice(index, 1);
+  }
 }

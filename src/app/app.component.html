@@ -22,15 +22,20 @@
     </form>
 </div>
 
-<div class="main-content-body">
-    <div *ngFor="let container of containers" class="container-huawei-repository-element-box">
-        <h3><strong>Element Name:</strong> {{ container.elementName }}</h3>
-        <div class="separator"></div>
-        <p><strong>User:</strong> {{ container.user }}</p>
-        <p><strong>Date:</strong> {{ container.date | date: 'EEEE, MMMM d, y'}}</p>
-        <p><strong>Work Area:</strong> {{ container.workArea }}</p>
+<div *ngFor="let container of containers; let i = index" class="container-huawei-repository-element-box">
+    <h3><strong>Element Name:</strong> {{ container.elementName }}</h3>
+    <div class="separator"></div>
+    <p><strong>User:</strong> {{ container.user }}</p>
+    <p><strong>Date:</strong> {{ container.date | date: 'EEEE, MMMM d, y' }}</p>
+    <p><strong>Work Area:</strong> {{ container.workArea }}</p>
+    <div class="button-container">
         <button class="blue-button">
             Details <i class="bi bi-search"></i>
         </button>
+        <button class="red-button" (click)="deleteContainer(i)">
+            Delete <i class="bi bi-trash"></i>
+        </button>
     </div>
 </div>
+
+
