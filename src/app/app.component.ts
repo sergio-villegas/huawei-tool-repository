@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Container } from './container.interface';
+import { MatDialog } from '@angular/material/dialog';
+import { ConfirmationDialogComponent } from './components/confirmation-dialog/confirmation-dialog.component';
 
 
 @Component({
@@ -9,6 +11,7 @@ import { Container } from './container.interface';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  title: string = 'My App Title';
   
   containers: Container[] = [
     {
@@ -33,7 +36,7 @@ export class AppComponent {
 
   containerForm: FormGroup;
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, public dialog: MatDialog) {
     this.containerForm = this.fb.group({
       elementName: ['', Validators.required],
       user: ['', Validators.required],
@@ -57,4 +60,19 @@ export class AppComponent {
   deleteContainer(index: number) {
     this.containers.splice(index, 1);
   }
+
+  openConfirmationDialog(index: number): void {
+    const dialogRef = this.dialog.open(ConfirmationDialogComponent, {
+      data: {
+        message: 'Are you sure you want to delete this container?',
+      },
+    });
+  
+    dialogRef.afterClosed().subscribe((result) => {
+      if (result) {
+        this.deleteContainer(index);
+      }
+    });
+  }
+
 }
