@@ -1,8 +1,12 @@
-<h1 mat-dialog-title>Confirm Action</h1>
-<div mat-dialog-content>
-  {{ data.message }}
-</div>
-<div mat-dialog-actions>
-  <button mat-button (click)="onCancelClick()">Cancel</button>
-  <button mat-button color="warn" (click)="onConfirmClick()">Confirm</button>
+<div class="container-confirmation-deletion-pop-up-window">
+  <h1 style="text-align: center;" mat-dialog-title><strong>Delete container</strong></h1>
+  <div mat-dialog-content>
+    <strong>
+      {{ data.message }}
+    </strong>
+  </div>
+  <div mat-dialog-actions class="button-container">
+    <button mat-button class="blue-button" (click)="onCancelClick()">Cancel</button>
+    <button mat-button class="red-button" (click)="onConfirmClick()">Confirm</button>
+  </div>
 </div>

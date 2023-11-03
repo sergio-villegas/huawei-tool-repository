@@ -1,0 +1,36 @@
+.container-confirmation-deletion-pop-up-window
+{ 
+    text-align: center;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.red-button
+{
+    color: azure;
+    background-color: #e12121;
+    border-radius: 6px;
+    border-color: #e12121;
+    margin: 0 8px;
+}
+
+.red-button:hover {
+    background-color: #ca0b0b;
+  }
+
+.blue-button
+{
+    color: azure;
+    background-color: #2f8fee;
+    border-radius: 6px;
+    border-color: #2f8fee;
+    margin: 0 8px;
+}
+
+.blue-button:hover {
+    background-color: #005bb5;
+  }
