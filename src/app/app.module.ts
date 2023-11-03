@@ -15,6 +15,7 @@ import { environment } from '../environments/environment';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     MatIconModule,
     MatCardModule,
     FormsModule,
+    ReactiveFormsModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideFirestore(() => getFirestore())
   ],
