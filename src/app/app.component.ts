@@ -9,7 +9,20 @@ import { Container } from './container.interface';
 
 export class AppComponent {
 
-  containers: Container[] = [];
+  containers: Container[] = [
+    {
+      elementName: 'HEDS user manual',
+      user: 's84323766',
+      date: new Date('10/27/2023'),
+      workArea: 'IT&SOC'
+    },
+    {
+      elementName: 'Tool for Huawei device configuration',
+      user: 's84323766',
+      date: new Date('10/27/2023'),
+      workArea: 'IP'
+    }
+  ];
 
   elementName: string = '';
   user: string = '';

@@ -34,7 +34,7 @@
         <h3><strong>Element Name:</strong> {{ this.container.elementName }}</h3>
         <div class="separator"></div>
         <p><strong>User:</strong> {{ this.container.user }}</p>
-        <p><strong>Date:</strong> {{ this.container.date }}</p>
+        <p><strong>Date:</strong> {{ this.container.date | date: 'EEEE, MMMM d, y'}}</p>
         <p><strong>Work Area:</strong> {{ this.container.workArea }}</p>
         <button class="blue-button">
             Details <i class="bi bi-search"></i>
