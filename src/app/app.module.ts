@@ -18,12 +18,14 @@ import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ConfirmationDialogComponent } from './components/confirmation-dialog/confirmation-dialog.component';
+import { FormContainerWindowComponent } from './components/form-container-window/form-container-window.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    ConfirmationDialogComponent
+    ConfirmationDialogComponent,
+    FormContainerWindowComponent
   ],
   imports: [
     BrowserModule,

@@ -1,9 +1,7 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Container } from './container.interface';
-import { MatDialog } from '@angular/material/dialog';
 import { ConfirmationDialogComponent } from './components/confirmation-dialog/confirmation-dialog.component';
-
+import { MatDialog } from '@angular/material/dialog';
+import { Container } from './container.interface';
 
 @Component({
   selector: 'app-root',
@@ -11,8 +9,7 @@ import { ConfirmationDialogComponent } from './components/confirmation-dialog/co
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title: string = 'My App Title';
-  
+
   containers: Container[] = [
     {
       elementName: 'Sample Container 1',
@@ -34,29 +31,9 @@ export class AppComponent {
     }
   ];
 
-  containerForm: FormGroup;
+  constructor(public dialog: MatDialog) { }
 
-  constructor(private fb: FormBuilder, public dialog: MatDialog) {
-    this.containerForm = this.fb.group({
-      elementName: ['', Validators.required],
-      user: ['', Validators.required],
-      date: [new Date(), Validators.required],
-      workArea: ['', Validators.required],
-    });
-  }
-
-  onSubmitContainerForm() {
-    if (this.containerForm.valid) {
-      const newContainer: Container = { ...this.containerForm.value };
-      this.containers.push(newContainer);
-      this.resetContainerForm();
-    }
-  }
-  
-  resetContainerForm() {
-    this.containerForm.reset();
-  }
-
+  title: string = 'My App Title';
   deleteContainer(index: number) {
     this.containers.splice(index, 1);
   }
