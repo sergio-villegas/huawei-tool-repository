@@ -29,12 +29,37 @@ export class AppComponent {
       user: 'sampleUser3',
       date: new Date('2023-11-04'),
       workArea: 'Sample Work Area 3'
+    },
+    {
+      elementName: 'Sample Container 4',
+      user: 'sampleUser4',
+      date: new Date('2023-11-05'),
+      workArea: 'Sample Work Area 4'
+    },
+    {
+      elementName: 'Sample Container 5',
+      user: 'sampleUser5',
+      date: new Date('2023-11-06'),
+      workArea: 'Sample Work Area 5'
+    },
+    {
+      elementName: 'Sample Container 6',
+      user: 'sampleUser6',
+      date: new Date('2023-11-07'),
+      workArea: 'Sample Work Area 6'
+    },
+    {
+      elementName: 'Sample Container 7',
+      user: 'sampleUser7',
+      date: new Date('2023-11-08'),
+      workArea: 'Sample Work Area 7'
     }
-  ];
+  ];  
 
   constructor(public dialog: MatDialog) { }
 
   title: string = 'My App Title';
+  
   deleteContainer(index: number) {
     this.containers.splice(index, 1);
   }

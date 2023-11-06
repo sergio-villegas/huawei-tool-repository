@@ -1,3 +1,5 @@
+@import "~@fortawesome/fontawesome-free/css/all.css";
+@import "~bootstrap-icons/font/bootstrap-icons.css";
 
 .main-content-body {
   margin-top: 60px;
@@ -71,4 +73,33 @@
 .button-add-container:hover {
   background: grey;
   color: azure;
+}
+
+.operational-bar
+{
+  height: 50px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.blue-button-creation
+{
+  color: azure;
+  padding: 3px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: inline-block;
+  margin-left: 20px;
+  font-size: 120%;
+}
+
+.blue-button-creation {
+  background-color: #2373c3;
+  margin-right: 10px;
+}
+
+.blue-button-creation:hover {
+  background-color: #005bb5;
 }
