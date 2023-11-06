@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ConfirmationDialogComponent } from './components/confirmation-dialog/confirmation-dialog.component';
 import { MatDialog } from '@angular/material/dialog';
 import { Container } from './container.interface';
+import { FormContainerWindowComponent } from './components/form-container-window/form-container-window.component';
 
 @Component({
   selector: 'app-root',
@@ -48,6 +49,22 @@ export class AppComponent {
     dialogRef.afterClosed().subscribe((result) => {
       if (result) {
         this.deleteContainer(index);
+      }
+    });
+  }
+
+  openContainerFormDialog(): void {
+    const dialogRef = this.dialog.open(FormContainerWindowComponent, {
+      width: '1000px',
+      data: {
+        containers: this.containers
+      }
+    });
+
+    dialogRef.afterClosed().subscribe((newContainer: Container | undefined) => {
+      if (newContainer) {
+        // A new container was created, you can add it to your containers array here
+        this.containers.push(newContainer);
       }
     });
   }

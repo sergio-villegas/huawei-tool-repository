@@ -1,6 +1,7 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Inject } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Container } from '../../container.interface';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-form-container-window',
@@ -14,7 +15,11 @@ export class FormContainerWindowComponent {
 
   containerForm: FormGroup;
 
-  constructor(private fb: FormBuilder) {
+  constructor(
+    private fb: FormBuilder,
+    public dialogRef: MatDialogRef<FormContainerWindowComponent>,
+    @Inject(MAT_DIALOG_DATA) public data: any
+    ) {
     this.containerForm = this.fb.group({
       elementName: ['', Validators.required],
       user: ['', Validators.required],
@@ -28,6 +33,7 @@ export class FormContainerWindowComponent {
       const newContainer: Container = { ...this.containerForm.value };
       this.containers.push(newContainer);
       this.resetContainerForm();
+      this.dialogRef.close(newContainer);
     }
   }
   
