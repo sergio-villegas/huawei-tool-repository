@@ -1,12 +1,8 @@
 .formularioContainer {
-    margin-left: 150px;
-    margin-right: 150px;
     background-color: #f0f0f0;
     padding: 20px;
     box-sizing: border-box;
-    margin-top: 20px;
 }
-
 
 .custom-label {
     display: inline-block;
@@ -16,7 +12,12 @@
 
 
 .custom-input-large {
-    width: calc(100% - 150px);
+    width: calc(100% - 143px);
+}
+
+.custom-input-description
+{
+    width: calc(100% - 143px);
 }
 
 .custom-input-short {

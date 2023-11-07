@@ -80,7 +80,7 @@ export class AppComponent {
 
   openContainerFormDialog(): void {
     const dialogRef = this.dialog.open(FormContainerWindowComponent, {
-      width: '1000px',
+      width: '2000px',
       data: {
         containers: this.containers
       }
@@ -88,7 +88,6 @@ export class AppComponent {
 
     dialogRef.afterClosed().subscribe((newContainer: Container | undefined) => {
       if (newContainer) {
-        // A new container was created, you can add it to your containers array here
         this.containers.push(newContainer);
       }
     });

@@ -1,21 +1,31 @@
 <div class="formularioContainer">
     <form [formGroup]="containerForm" (ngSubmit)="onSubmitContainerForm()">
+        <!--Container Name-->
         <label for="elementName" class="custom-label"><strong>Container name:</strong></label>
         <input type="text" id="elementName" name="elementName" class="custom-input-large" formControlName="elementName"
         placeholder="Enter the name of your container..."><br><br>
         
+        <!--User-->
         <label for="user" class="custom-label"><strong>User:</strong></label>
         <input type="text" id="user" name="user" class="custom-input-short-separation" formControlName="user"
         placeholder="Enter your user ID...">
         
+        <!--Date-->
         <label for="date" class="custom-label"><strong>Date:</strong></label>
         <input type="date" id="date" name="date" class="custom-input-short-separation" formControlName="date"
         required>
 
+        <!--Work Area-->
         <label for="workArea" class="custom-label"><strong>Work Area:</strong></label>
         <input type="text" id="workArea" name="workArea" class="custom-input-short" formControlName="workArea"
         placeholder="Enter your working area..."><br><br>
-       
+
+        <!--Description-->
+        <label for="description" class="custom-label"><strong>Description:</strong></label>
+        <input type="text" id="description" name="description" class="custom-input-description" formControlName="description"
+        placeholder="Describe your container: purpose, usage..."><br><br>
+
+        <!--Submition button-->
         <input type="submit" class="blue-button-creation" value="Submit">
     </form>
 </div>
