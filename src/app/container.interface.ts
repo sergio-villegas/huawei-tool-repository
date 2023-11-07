@@ -4,4 +4,5 @@ export interface Container {
     user : string;
     date : Date;
     workArea : string;
+    description: string;
 }

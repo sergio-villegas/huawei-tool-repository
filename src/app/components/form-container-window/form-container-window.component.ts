@@ -25,6 +25,7 @@ export class FormContainerWindowComponent {
       user: ['', Validators.required],
       date: [new Date(), Validators.required],
       workArea: ['', Validators.required],
+      description: ['', Validators.required],
     });
   }
 
