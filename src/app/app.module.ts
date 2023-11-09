@@ -19,13 +19,15 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ConfirmationDialogComponent } from './components/confirmation-dialog/confirmation-dialog.component';
 import { FormContainerWindowComponent } from './components/form-container-window/form-container-window.component';
+import { CreditSectionComponent } from './components/credit-section/credit-section.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     ConfirmationDialogComponent,
-    FormContainerWindowComponent
+    FormContainerWindowComponent,
+    CreditSectionComponent
   ],
   imports: [
     BrowserModule,
