@@ -1,12 +1,21 @@
-.top-navbar {
-    width: 100%;
-    overflow: auto;
+/* navbar.component.css */
+
+.navbar {
     display: flex;
     align-items: center;
-}
-
-.img-huawei {
-    float: left;
-    margin-right: 35px;
-    margin-left: 35px;
-}
+    padding-left: 25px;
+    background-color: #212529; /* Cambia el color de fondo */
+    border-bottom: 1px solid #ccc; /* Opcional: para una línea separadora */
+  }
+  
+  .logo {
+    margin-right: 18px;
+  }
+  
+  .title {
+    margin-right: auto;
+    font-size: 1.8em;
+    color: azure;
+    font-family: 'Scada', sans-serif;
+  }
+  

@@ -60,6 +60,55 @@ export class AppComponent {
       date: new Date('2023-11-08'),
       workArea: 'Sample Work Area 7',
       description: 'Test description sample'
+    },
+    {
+      elementName: 'Sample Container 1',
+      user: 'sampleUser1',
+      date: new Date('2023-11-02'),
+      workArea: 'Sample Work Area 1',
+      description: 'Test description sample'
+    },
+    {
+      elementName: 'Sample Container 2',
+      user: 'sampleUser2',
+      date: new Date('2023-11-03'),
+      workArea: 'Sample Work Area 2',
+      description: 'Test description sample'
+    },
+    {
+      elementName: 'Sample Container 3',
+      user: 'sampleUser3',
+      date: new Date('2023-11-04'),
+      workArea: 'Sample Work Area 3',
+      description: 'Test description sample'
+    },
+    {
+      elementName: 'Sample Container 4',
+      user: 'sampleUser4',
+      date: new Date('2023-11-05'),
+      workArea: 'Sample Work Area 4',
+      description: 'Test description sample'
+    },
+    {
+      elementName: 'Sample Container 5',
+      user: 'sampleUser5',
+      date: new Date('2023-11-06'),
+      workArea: 'Sample Work Area 5',
+      description: 'Test description sample'
+    },
+    {
+      elementName: 'Sample Container 6',
+      user: 'sampleUser6',
+      date: new Date('2023-11-07'),
+      workArea: 'Sample Work Area 6',
+      description: 'Test description sample'
+    },
+    {
+      elementName: 'Sample Container 7',
+      user: 'sampleUser7',
+      date: new Date('2023-11-08'),
+      workArea: 'Sample Work Area 7',
+      description: 'Test description sample'
     }
   ];  
 

@@ -1,13 +1,15 @@
 .formularioContainer {
-    background-color: #f0f0f0;
+    background-color: #f0f0f0c6;
     padding: 20px;
+    padding-top: 30px;
     box-sizing: border-box;
 }
 
-.custom-label {
+.custom-label, .font {
     display: inline-block;
     width: 130px;
     transform: scale(1.15);
+    font-family: 'Arial';
 }
 
 
@@ -45,3 +47,15 @@
 .blue-button-creation:hover {
     background-color: #005bb5;
 }
+
+.container {
+    padding: 30px;
+    height: 10px;
+    text-align: center;
+    line-height: 10px; /* Esto ayuda a centrar verticalmente el texto */
+    background-color: rgb(86, 83, 83); /* Puedes ajustar el color de fondo según tus preferencias */
+    font-family: 'Arial';
+    font-size: 2rem;
+    color: azure;
+}
+

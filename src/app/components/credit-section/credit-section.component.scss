@@ -1,28 +1,26 @@
-/* credit-section.component.css */
-.credit-section {
-    background-color: #212529;
-    color: azure;
-    padding: 20px;
-    display: flex; /* Utilizamos un contenedor flexible para alinear los elementos */
-    justify-content: space-between; /* Alinea los elementos en los extremos */
-    height: 100px;
-  }
-  
-  .left-content {
-    text-align: left; /* Alinea el texto a la izquierda */
-  }
-  
-  .right-content {
-    text-align: right; /* Alinea el texto a la derecha */
-  }
-  
-  .right-content ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .right-content li {
-    /* Opcional: Estilos para los elementos de la lista */
-  }
 
-  
+.credit-section {
+  background-color: #212529;
+  color: azure;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  height: 115px;
+}
+
+.left-content {
+  text-align: left;
+}
+
+.right-content {
+  text-align: right;
+}
+
+.right-content ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.font {
+  font-family: 'Arial'
+}
