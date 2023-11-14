@@ -3,6 +3,7 @@ import { ConfirmationDialogComponent } from './components/confirmation-dialog/co
 import { MatDialog } from '@angular/material/dialog';
 import { Container } from './container.interface';
 import { FormContainerWindowComponent } from './components/form-container-window/form-container-window.component';
+import { ContainerDetailsDialogComponent } from './components/container-details-dialog/container-details-dialog.component';
 
 @Component({
   selector: 'app-root',
@@ -148,5 +149,15 @@ export class AppComponent {
       }
     });
   }
+
+  openContainerDetailsDialog(container: Container): void {
+    const dialogRef = this.dialog.open(ContainerDetailsDialogComponent, {
+        width: '2000px',
+        height: '600px',
+        data: {
+            container: container
+        }
+    });
+}
 
 }

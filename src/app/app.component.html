@@ -1,30 +1,30 @@
 <app-navbar></app-navbar>
 <div class="main-page">
-  
+
   <div class="operational-bar">
-      <button class="blue-button-creation" (click)="openContainerFormDialog()">
-        <i class="fas fa-plus"></i> Add Container
-      </button>
-    </div>
-  
-  <div class="main-body">
-      <div *ngFor="let container of containers; let i = index" class="container-huawei-repository-element-box">
-          <h3 class="font"><strong>Element Name:</strong> {{ container.elementName }}</h3>
-          <div class="separator"></div>
-          <p class="font"><strong>User:</strong> {{ container.user }}</p>
-          <p class="font"><strong>Date:</strong> {{ container.date | date: 'EEEE, MMMM d, y' }}</p>
-          <p class="font"><strong>Work Area:</strong> {{ container.workArea }}</p>
-          <p class="font"><strong>Description:</strong> {{ container.description }}</p>
-          <div class="button-container">
-              <button class="blue-button">
-                  <i class="bi bi-search"></i>
-              </button>
-              <button class="red-button" (click)="openConfirmationDialog(i)">
-                  <i class="bi bi-trash"></i>
-                </button>          
-          </div>
-      </div>
+    <button class="blue-button-creation" (click)="openContainerFormDialog()">
+      <i class="fas fa-plus"></i> Add Container
+    </button>
   </div>
-  
+
+  <div class="main-body">
+    <div *ngFor="let container of containers; let i = index" class="container-huawei-repository-element-box">
+      <h3 class="font"><strong>Element Name:</strong> {{ container.elementName }}</h3>
+      <div class="separator"></div>
+      <p class="font"><strong>User:</strong> {{ container.user }}</p>
+      <p class="font"><strong>Date:</strong> {{ container.date | date: 'EEEE, MMMM d, y' }}</p>
+      <p class="font"><strong>Work Area:</strong> {{ container.workArea }}</p>
+      <p class="font"><strong>Description:</strong> {{ container.description }}</p>
+      <div class="button-container">
+        <button class="blue-button" (click)="openContainerDetailsDialog(container)">
+          <i class="bi bi-search"></i>
+        </button>
+        <button class="red-button" (click)="openConfirmationDialog(i)">
+          <i class="bi bi-trash"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
   <app-credit-section></app-credit-section>
 </div>

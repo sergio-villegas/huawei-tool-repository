@@ -20,6 +20,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { ConfirmationDialogComponent } from './components/confirmation-dialog/confirmation-dialog.component';
 import { FormContainerWindowComponent } from './components/form-container-window/form-container-window.component';
 import { CreditSectionComponent } from './components/credit-section/credit-section.component';
+import { ContainerDetailsDialogComponent } from './components/container-details-dialog/container-details-dialog.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { CreditSectionComponent } from './components/credit-section/credit-secti
     NavbarComponent,
     ConfirmationDialogComponent,
     FormContainerWindowComponent,
-    CreditSectionComponent
+    CreditSectionComponent,
+    ContainerDetailsDialogComponent
   ],
   imports: [
     BrowserModule,
