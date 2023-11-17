@@ -1,1 +1,21 @@
-<p>container-details-dialog works!</p>
+<div class="container-details">
+    <div class="title">
+      <strong>Container Name: </strong>
+      <span>{{ data.container.elementName }}</span>
+    </div>
+    <div class="separator"></div>
+    <div class="content-container">
+      <div class="sub-title-container">
+        <p class="sub-title"><strong>User:</strong> {{ data.container.user }}</p>
+        <p class="sub-title"><strong>Date:</strong> {{ data.container.date | date: 'EEEE, MMMM d, y' }}</p>
+        <p class="sub-title"><strong>Work Area:</strong> {{ data.container.workArea }}</p>
+        <p class="sub-title"><strong>Description:</strong> {{ data.container.description }}</p>
+        <!-- Agrega más campos según sea necesario -->
+      </div>
+      <div class="additional-content-container">
+        <div class="vertical-line"></div>
+        <h2>Prueba de que si hay padding</h2>
+      </div>
+    </div>
+  </div>
+  

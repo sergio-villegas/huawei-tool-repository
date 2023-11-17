@@ -1,0 +1,52 @@
+.container-details {
+  white-space: pre-wrap;
+  padding: 20px;
+  background-color: aqua;
+}
+
+.title {
+  font-size: 1.7rem;
+  line-height: 1.2;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.separator {
+  border-top: 5px solid #212529;
+  margin: 15px 0;
+}
+
+.content-container {
+  display: flex;
+  width: 100%;
+}
+
+.sub-title-container {
+  position: relative;
+  flex-basis: 50%;
+  padding: 20px;
+  background-color: blueviolet;
+}
+
+.sub-title {
+  font-size: 1.3rem;
+  line-height: 1.0;
+  padding-bottom: 50px;
+}
+
+.additional-content-container {
+  position: relative;
+  padding: 20px;
+  flex-basis: 50%;
+  background-color: red;
+  /* Estilos para el otro 50% del contenido */
+}
+
+.vertical-line {
+  position: absolute;
+  height: 100%;
+  width: 2px;
+  background-color: #212529;
+  top: 0;
+  left: 0; /* Ajusta según tus necesidades */
+}

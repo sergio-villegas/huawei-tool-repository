@@ -14,7 +14,7 @@ export class AppComponent {
 
   containers: Container[] = [
     {
-      elementName: 'Sample Container 1',
+      elementName: 'Creacion de un CVR para creacion de una cuenta en HEDS',
       user: 'sampleUser1',
       date: new Date('2023-11-02'),
       workArea: 'Sample Work Area 1',
@@ -153,7 +153,7 @@ export class AppComponent {
   openContainerDetailsDialog(container: Container): void {
     const dialogRef = this.dialog.open(ContainerDetailsDialogComponent, {
         width: '2000px',
-        height: '600px',
+        height: '700px',
         data: {
             container: container
         }
