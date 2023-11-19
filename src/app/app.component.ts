@@ -15,10 +15,10 @@ export class AppComponent {
   containers: Container[] = [
     {
       elementName: 'Creacion de un CVR para creacion de una cuenta en HEDS',
-      user: 'sampleUser1',
+      user: 's84323766',
       date: new Date('2023-11-02'),
-      workArea: 'Sample Work Area 1',
-      description: 'Test description sample'
+      workArea: 'IT & SOC',
+      description: 'Esta serie de documentos busca los pasos a seguir para poder dar de alta un ticket de creacion de usuario para poder utilizar las maquinas virtuales a traves de HEDS.'
     },
     {
       elementName: 'Sample Container 2',
@@ -111,12 +111,12 @@ export class AppComponent {
       workArea: 'Sample Work Area 7',
       description: 'Test description sample'
     }
-  ];  
+  ];
 
   constructor(public dialog: MatDialog) { }
 
   title: string = 'My App Title';
-  
+
   deleteContainer(index: number) {
     this.containers.splice(index, 1);
   }
@@ -127,7 +127,7 @@ export class AppComponent {
         message: 'Are you sure you want to delete this container?',
       },
     });
-  
+
     dialogRef.afterClosed().subscribe((result) => {
       if (result) {
         this.deleteContainer(index);
@@ -152,12 +152,11 @@ export class AppComponent {
 
   openContainerDetailsDialog(container: Container): void {
     const dialogRef = this.dialog.open(ContainerDetailsDialogComponent, {
-        width: '2000px',
-        height: '700px',
-        data: {
-            container: container
-        }
+      width: '2000px',
+      data: {
+        container: container
+      },
     });
-}
+  }
 
 }

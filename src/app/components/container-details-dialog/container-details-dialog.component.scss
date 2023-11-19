@@ -1,7 +1,7 @@
 .container-details {
   white-space: pre-wrap;
   padding: 20px;
-  background-color: aqua;
+  background-color: #d3d1d1;
 }
 
 .title {
@@ -25,28 +25,30 @@
   position: relative;
   flex-basis: 50%;
   padding: 20px;
-  background-color: blueviolet;
+  background-color: azure;
+  border: 3px solid #212529;
+  border-radius: 8px;
+  margin-right: 5px;
 }
 
 .sub-title {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   line-height: 1.0;
-  padding-bottom: 50px;
+  padding-bottom: 30px;
+}
+
+.sub-title-description {
+  font-size: 1.10rem;
+  line-height: 1.0;
+  line-height: 1.2;
 }
 
 .additional-content-container {
   position: relative;
   padding: 20px;
   flex-basis: 50%;
-  background-color: red;
-  /* Estilos para el otro 50% del contenido */
-}
-
-.vertical-line {
-  position: absolute;
-  height: 100%;
-  width: 2px;
-  background-color: #212529;
-  top: 0;
-  left: 0; /* Ajusta según tus necesidades */
+  background-color: azure;
+  border: 3px solid #212529;
+  border-radius: 8px;
+  margin-left: 5px;
 }
