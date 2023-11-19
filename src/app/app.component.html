@@ -2,23 +2,41 @@
 <div class="main-page">
 
   <div class="operational-bar">
+    <!-- Button for create a new container -->
     <button class="blue-button-creation" (click)="openContainerFormDialog()">
       <i class="fas fa-plus"></i> Add Container
+    </button>
+
+    <!-- Spacer para empujar el siguiente botón hacia la derecha -->
+    <div class="spacer"></div>
+
+    <!-- Button for reverse the order of the list container -->
+    <button class="reverse-button" (click)="toggleOrden()">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrows-vertical"
+        viewBox="0 0 16 16">
+        <path
+          d="M8.354 14.854a.5.5 0 0 1-.708 0l-2-2a.5.5 0 0 1 .708-.708L7.5 13.293V2.707L6.354 3.854a.5.5 0 1 1-.708-.708l2-2a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 2.707v10.586l1.146-1.147a.5.5 0 0 1 .708.708l-2 2Z" />
+      </svg>
     </button>
   </div>
 
   <div class="main-body">
-    <div *ngFor="let container of containers; let i = index" class="container-huawei-repository-element-box">
-      <h3 class="font"><strong>Element Name:</strong> {{ container.elementName }}</h3>
+    <div *ngFor="let container of (invertirOrden ? containers.slice().reverse() : containers); let i = index"
+      class="container-huawei-repository-element-box">
+      <h3 class="font">{{ container.elementName }}</h3>
+      <!-- Visual line that separates the information visually -->
       <div class="separator"></div>
+      <!-- Container information deployment -->
       <p class="font"><strong>User:</strong> {{ container.user }}</p>
       <p class="font"><strong>Date:</strong> {{ container.date | date: 'EEEE, MMMM d, y' }}</p>
       <p class="font"><strong>Work Area:</strong> {{ container.workArea }}</p>
       <p class="font"><strong>Description:</strong> {{ container.description }}</p>
       <div class="button-container">
+        <!-- Button for container-detials-pop-up-window -->
         <button class="blue-button" (click)="openContainerDetailsDialog(container)">
           <i class="bi bi-search"></i>
         </button>
+        <!-- Button for container deletion -->
         <button class="red-button" (click)="openConfirmationDialog(i)">
           <i class="bi bi-trash"></i>
         </button>

@@ -117,12 +117,20 @@ export class AppComponent {
   constructor(public dialog: MatDialog) { }
 
   title: string = 'My App Title';
+  invertirOrden = false;
+
+  toggleOrden() {
+    this.invertirOrden = !this.invertirOrden;
+  }
 
   deleteContainer(index: number) {
     this.containers.splice(index, 1);
   }
 
   openConfirmationDialog(index: number): void {
+
+    const visualIndex = this.invertirOrden ? this.containers.length - 1 - index : index;
+
     const dialogRef = this.dialog.open(ConfirmationDialogComponent, {
       data: {
         message: 'Are you sure you want to delete this container?',
@@ -131,7 +139,7 @@ export class AppComponent {
 
     dialogRef.afterClosed().subscribe((result) => {
       if (result) {
-        this.deleteContainer(index);
+        this.deleteContainer(visualIndex);
       }
     });
   }

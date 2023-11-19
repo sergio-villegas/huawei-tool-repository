@@ -81,10 +81,10 @@
   width: 100%;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
-.blue-button-creation
-{
+.blue-button-creation {
   color: azure;
   padding: 3px 10px;
   border: none;
@@ -93,9 +93,6 @@
   display: inline-block;
   margin-left: 20px;
   font-size: 120%;
-}
-
-.blue-button-creation {
   background-color: #2373c3;
   margin-right: 10px;
 }
@@ -115,4 +112,23 @@
 
 .custom-backdrop {
   background-color: rgba(0, 0, 0, 0.5) !important; /* Black color with 50% opacity */
+}
+
+.reverse-button {
+  height: 30px;
+  width: 35px;
+  color: azure;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #212529;
+  margin-right: 20px;
+}
+
+.reverse-button:hover {
+  background-color: #56595c;
+}
+
+.spacer {
+  flex-grow: 1;
 }
