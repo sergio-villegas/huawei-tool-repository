@@ -6,9 +6,11 @@
     <div class="separator"></div>
     <div class="content-container">
       <div class="sub-title-container">
-        <p class="sub-title"><strong>User:</strong> {{ data.container.user }}</p>
+        <div class="subtitle-container">
+          <p class="sub-title-left"><strong>User:</strong> {{ data.container.user }}</p>
+          <p class="sub-title"><strong>Work Area:</strong> {{ data.container.workArea }}</p>
+        </div>                
         <p class="sub-title"><strong>Date:</strong> {{ data.container.date | date: 'EEEE, MMMM d, y' }}</p>
-        <p class="sub-title"><strong>Work Area:</strong> {{ data.container.workArea }}</p>
         <p class="sub-title-description"><strong>Description:</strong> {{ data.container.description }}</p>
         <!-- Agrega más campos según sea necesario -->
       </div>
