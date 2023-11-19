@@ -140,6 +140,7 @@ export class AppComponent {
   animationState = 'in';
 
   ngOnInit() {
+    this.filteredContainers = this.containers;
     this.invertirOrden = !this.invertirOrden;
     this.rotateButtonState = this.invertirOrden ? 'reversed' : 'normal';
     setTimeout(() => {
@@ -196,5 +197,20 @@ export class AppComponent {
       },
     });
   }
+
+  searchTerm: string = '';
+  filteredContainers: Container[] = [];
+  noResultsFound: boolean = false;
+
+  performSearch() {
+    this.filteredContainers = this.containers.filter(container =>
+      container.elementName.toLowerCase().includes(this.searchTerm.toLowerCase()) ||
+      container.user.toLowerCase().includes(this.searchTerm.toLowerCase()) ||
+      container.workArea.toLowerCase().includes(this.searchTerm.toLowerCase()) ||
+      container.description.toLowerCase().includes(this.searchTerm.toLowerCase())
+    );
+  
+    this.noResultsFound = this.filteredContainers.length === 0;
+  }  
 
 }

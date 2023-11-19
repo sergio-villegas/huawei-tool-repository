@@ -18,10 +18,21 @@
           d="M8.354 14.854a.5.5 0 0 1-.708 0l-2-2a.5.5 0 0 1 .708-.708L7.5 13.293V2.707L6.354 3.854a.5.5 0 1 1-.708-.708l2-2a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 2.707v10.586l1.146-1.147a.5.5 0 0 1 .708.708l-2 2Z" />
       </svg>
     </button>
+
+    <!-- Barra de búsqueda -->
+    <div class="search-bar">
+      <input type="text" placeholder="Buscar contenedor..." [(ngModel)]="searchTerm" />
+      <button class="search-button" (click)="performSearch()">
+        <i class="fas fa-search"></i> Buscar
+      </button>
+    </div>
   </div>
 
   <div class="main-body">
-    <div *ngFor="let container of (invertirOrden ? containers.slice().reverse() : containers); let i = index"
+    <div *ngIf="noResultsFound" class="no-results-message">
+      No encontrados
+    </div>
+    <div *ngFor="let container of (invertirOrden ? filteredContainers.slice().reverse() : filteredContainers); let i = index"
       class="container-huawei-repository-element-box" [@fadeInOut]="animationState">
       <h3 class="font">{{ container.elementName }}</h3>
       <!-- Visual line that separates the information visually -->
