@@ -139,7 +139,9 @@ export class AppComponent {
   rotateButtonState = 'normal';
   animationState = 'in';
 
-  ngAfterViewInit() {
+  ngOnInit() {
+    this.invertirOrden = !this.invertirOrden;
+    this.rotateButtonState = this.invertirOrden ? 'reversed' : 'normal';
     setTimeout(() => {
       this.animationState = 'in';
     }, 1000);
