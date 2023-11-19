@@ -19,4 +19,10 @@ export class ConfirmationDialogComponent {
   onConfirmClick(): void {
     this.dialogRef.close(true);
   }
+
+  ngOnInit(): void {
+    // Manually set the backdrop styles
+    const backdrop = document.getElementsByClassName('cdk-overlay-backdrop')[0] as HTMLElement;
+    backdrop.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
+  }
 }
