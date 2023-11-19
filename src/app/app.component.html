@@ -20,17 +20,12 @@
     </button>
 
     <!-- Barra de búsqueda -->
-    <input type="text" placeholder="Buscar contenedor..." [(ngModel)]="searchTerm" (input)="performSearch()" />
-    <button class="search-button" (click)="performSearch()">
-      <i class="fas fa-search"></i> Buscar
-    </button>    
+    <input class="finding-field" type="text" placeholder="Find a container..." [(ngModel)]="searchTerm" (input)="performSearch()" />
   </div>
 
   <div class="main-body">
-    <div *ngIf="noResultsFound" class="no-results-message">
-      No encontrados
-    </div>
-    <div *ngFor="let container of (invertirOrden ? filteredContainers.slice().reverse() : filteredContainers); let i = index"
+    <div
+      *ngFor="let container of (invertirOrden ? filteredContainers.slice().reverse() : filteredContainers); let i = index"
       class="container-huawei-repository-element-box" [@fadeInOut]="animationState">
       <h3 class="font">{{ container.elementName }}</h3>
       <!-- Visual line that separates the information visually -->
@@ -46,9 +41,14 @@
           <i class="bi bi-search"></i>
         </button>
         <!-- Button for container deletion -->
-        <button class="red-button" (click)="openConfirmationDialog(i)">
+        <button class="red-button" (click)="openConfirmationDialog(container)">
           <i class="bi bi-trash"></i>
         </button>
+      </div>
+    </div>
+    <div *ngIf="noResultsFound" class="no-results-message-container">
+      <div class="no-results-message">
+        Element Not Found
       </div>
     </div>
   </div>

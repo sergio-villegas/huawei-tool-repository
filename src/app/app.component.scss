@@ -1,6 +1,10 @@
 @import "~@fortawesome/fontawesome-free/css/all.css";
 @import "~bootstrap-icons/font/bootstrap-icons.css";
 
+.main-body {
+  min-height: 70vh;
+}
+
 .main-content-body {
   margin-top: 60px;
 }
@@ -30,8 +34,8 @@
 }
 
 
-.blue-button, .red-button
-{
+.blue-button,
+.red-button {
   color: azure;
   padding: 3px 10px;
   border: none;
@@ -75,8 +79,8 @@
   color: azure;
 }
 
-.operational-bar
-{
+.operational-bar {
+  padding-top: 10px;
   height: 50px;
   width: 100%;
   display: flex;
@@ -105,13 +109,13 @@
   font-family: 'Noto Sans Linear B', sans-serif;
 }
 
-.main-page
-{
+.main-page {
   background-color: #d3d1d1;
 }
 
 .custom-backdrop {
-  background-color: rgba(0, 0, 0, 0.5) !important; /* Black color with 50% opacity */
+  background-color: rgba(0, 0, 0, 0.5) !important;
+  /* Black color with 50% opacity */
 }
 
 .reverse-button {
@@ -131,4 +135,29 @@
 
 .spacer {
   flex-grow: 1;
+}
+
+.no-results-message-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 70vh;
+}
+
+.no-results-message {
+  text-align: center;
+}
+
+.finding-field {
+  padding: 6px;
+  font-size: 16px;
+  border: 3px solid rgb(0, 0, 0);
+  margin-right: 20px;
+  border-radius: 6px;
+  width: 250px;
+  outline: none;
+  transition: border-color 0.3s;
+  &:focus {
+    border-color: #66afe9;
+  }
 }

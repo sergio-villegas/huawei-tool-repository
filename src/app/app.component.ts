@@ -153,23 +153,24 @@ export class AppComponent {
     this.rotateButtonState = this.invertirOrden ? 'reversed' : 'normal';
   }
 
-  deleteContainer(index: number) {
-    this.containers.splice(index, 1);
+  deleteContainer(container: Container): void {
+    const index = this.containers.indexOf(container);
+    if (index !== -1) {
+      this.containers.splice(index, 1);
+      this.performSearch();
+    }
   }
 
-  openConfirmationDialog(index: number): void {
-
-    const visualIndex = this.invertirOrden ? this.containers.length - 1 - index : index;
-
+  openConfirmationDialog(container: Container): void {
     const dialogRef = this.dialog.open(ConfirmationDialogComponent, {
       data: {
         message: 'Are you sure you want to delete this container?',
       },
     });
-
+  
     dialogRef.afterClosed().subscribe((result) => {
       if (result) {
-        this.deleteContainer(visualIndex);
+        this.deleteContainer(container);
       }
     });
   }
