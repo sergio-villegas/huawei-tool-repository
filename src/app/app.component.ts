@@ -203,14 +203,14 @@ export class AppComponent {
   noResultsFound: boolean = false;
 
   performSearch() {
+    // Filtra los contenedores según el término de búsqueda
     this.filteredContainers = this.containers.filter(container =>
       container.elementName.toLowerCase().includes(this.searchTerm.toLowerCase()) ||
       container.user.toLowerCase().includes(this.searchTerm.toLowerCase()) ||
-      container.workArea.toLowerCase().includes(this.searchTerm.toLowerCase()) ||
-      container.description.toLowerCase().includes(this.searchTerm.toLowerCase())
+      container.workArea.toLowerCase().includes(this.searchTerm.toLowerCase())
     );
-  
+
     this.noResultsFound = this.filteredContainers.length === 0;
-  }  
+  }
 
 }
