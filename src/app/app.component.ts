@@ -1,20 +1,38 @@
-import { Component } from '@angular/core';
-import { ConfirmationDialogComponent } from './components/confirmation-dialog/confirmation-dialog.component';
+import { Component, OnInit } from '@angular/core';
+import { trigger, state, style, animate, transition } from '@angular/animations';
 import { MatDialog } from '@angular/material/dialog';
 import { Container } from './container.interface';
+import { ConfirmationDialogComponent } from './components/confirmation-dialog/confirmation-dialog.component';
 import { FormContainerWindowComponent } from './components/form-container-window/form-container-window.component';
 import { ContainerDetailsDialogComponent } from './components/container-details-dialog/container-details-dialog.component';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
+  animations: [
+    trigger('fadeInOut', [
+      state('in', style({ opacity: 1 })),
+      transition(':enter', [
+        style({ opacity: 0 }),
+        animate(300)
+      ]),
+      transition(':leave', [
+        animate(300, style({ opacity: 0 }))
+      ])
+    ]),
+    trigger('rotateButton', [
+      state('normal', style({ transform: 'rotate(0deg)' })),
+      state('reversed', style({ transform: 'rotate(180deg)' })),
+      transition('normal <=> reversed', animate('300ms ease-in-out')),
+    ])
+  ]
 })
 export class AppComponent {
 
   containers: Container[] = [
     {
-      elementName: 'Sample Container 14',
+      elementName: 'Sample Container 1',
       user: 'sampleUser7',
       date: new Date('2023-11-08'),
       workArea: 'GNOC',
@@ -116,11 +134,20 @@ export class AppComponent {
 
   constructor(public dialog: MatDialog) { }
 
-  title: string = 'My App Title';
+  title: string = 'huawei-repository';
   invertirOrden = false;
+  rotateButtonState = 'normal';
+  animationState = 'in';
+
+  ngAfterViewInit() {
+    setTimeout(() => {
+      this.animationState = 'in';
+    }, 1000);
+  }
 
   toggleOrden() {
     this.invertirOrden = !this.invertirOrden;
+    this.rotateButtonState = this.invertirOrden ? 'reversed' : 'normal';
   }
 
   deleteContainer(index: number) {

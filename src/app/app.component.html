@@ -11,7 +11,7 @@
     <div class="spacer"></div>
 
     <!-- Button for reverse the order of the list container -->
-    <button class="reverse-button" (click)="toggleOrden()">
+    <button class="reverse-button" (click)="toggleOrden()" [@rotateButton]="rotateButtonState">
       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrows-vertical"
         viewBox="0 0 16 16">
         <path
@@ -22,7 +22,7 @@
 
   <div class="main-body">
     <div *ngFor="let container of (invertirOrden ? containers.slice().reverse() : containers); let i = index"
-      class="container-huawei-repository-element-box">
+      class="container-huawei-repository-element-box" [@fadeInOut]="animationState">
       <h3 class="font">{{ container.elementName }}</h3>
       <!-- Visual line that separates the information visually -->
       <div class="separator"></div>
