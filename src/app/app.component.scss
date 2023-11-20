@@ -126,7 +126,7 @@
   border-radius: 8px;
   cursor: pointer;
   background-color: #212529;
-  margin-right: 20px;
+  margin-right: 5px;
 }
 
 .reverse-button:hover {
@@ -141,11 +141,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  position: absolute;
   min-height: 70vh;
-}
-
-.no-results-message {
+  width: 100%;
   text-align: center;
+  padding-bottom: 115px;
 }
 
 .finding-field {

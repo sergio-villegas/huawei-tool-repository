@@ -24,6 +24,9 @@
   </div>
 
   <div class="main-body">
+    <div *ngIf="noResultsFound" class="no-results-message-container">
+        Element Not Found
+    </div>
     <div
       *ngFor="let container of (invertirOrden ? filteredContainers.slice().reverse() : filteredContainers); let i = index"
       class="container-huawei-repository-element-box" [@fadeInOut]="animationState">
@@ -34,7 +37,7 @@
       <p class="font"><strong>User:</strong> {{ container.user }}</p>
       <p class="font"><strong>Date:</strong> {{ container.date | date: 'EEEE, MMMM d, y' }}</p>
       <p class="font"><strong>Work Area:</strong> {{ container.workArea }}</p>
-      <p class="font"><strong>Description:</strong> {{ container.description }}</p>
+      <!--p class="font"><strong>Description:</strong> {{ container.description }}</p-->
       <div class="button-container">
         <!-- Button for container-detials-pop-up-window -->
         <button class="blue-button" (click)="openContainerDetailsDialog(container)">
@@ -46,12 +49,8 @@
         </button>
       </div>
     </div>
-    <div *ngIf="noResultsFound" class="no-results-message-container">
-      <div class="no-results-message">
-        Element Not Found
-      </div>
-    </div>
   </div>
 
   <app-credit-section></app-credit-section>
+
 </div>
