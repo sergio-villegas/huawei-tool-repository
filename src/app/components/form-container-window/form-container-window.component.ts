@@ -1,6 +1,6 @@
 import { Component, Input, Inject } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Container } from '../../container.interface';
+import { Container } from '../../interfaces/container.interface';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 @Component({

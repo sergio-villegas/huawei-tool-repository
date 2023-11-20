@@ -1,6 +1,6 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
-import { Container } from 'src/app/container.interface';
+import { Container } from 'src/app/interfaces/container.interface';
 
 @Component({
   selector: 'app-container-details-dialog',

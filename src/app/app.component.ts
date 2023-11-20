@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { trigger, state, style, animate, transition } from '@angular/animations';
 import { MatDialog } from '@angular/material/dialog';
-import { Container } from './container.interface';
+import { Container } from './interfaces/container.interface';
 import { ConfirmationDialogComponent } from './components/confirmation-dialog/confirmation-dialog.component';
 import { FormContainerWindowComponent } from './components/form-container-window/form-container-window.component';
 import { ContainerDetailsDialogComponent } from './components/container-details-dialog/container-details-dialog.component';
