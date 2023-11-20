@@ -12,20 +12,19 @@
 
     <!-- Button for reverse the order of the list container -->
     <button class="reverse-button" (click)="toggleOrden()" [@rotateButton]="rotateButtonState">
-      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrows-vertical"
-        viewBox="0 0 16 16">
-        <path
-          d="M8.354 14.854a.5.5 0 0 1-.708 0l-2-2a.5.5 0 0 1 .708-.708L7.5 13.293V2.707L6.354 3.854a.5.5 0 1 1-.708-.708l2-2a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 2.707v10.586l1.146-1.147a.5.5 0 0 1 .708.708l-2 2Z" />
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrows-vertical" viewBox="0 0 16 16">
+        <path d="M8.354 14.854a.5.5 0 0 1-.708 0l-2-2a.5.5 0 0 1 .708-.708L7.5 13.293V2.707L6.354 3.854a.5.5 0 1 1-.708-.708l2-2a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 2.707v10.586l1.146-1.147a.5.5 0 0 1 .708.708l-2 2Z" />
       </svg>
     </button>
 
-    <!-- Barra de búsqueda -->
+    <!-- Searching bar -->
     <input class="finding-field" type="text" placeholder="Find a container..." [(ngModel)]="searchTerm" (input)="performSearch()" />
   </div>
 
   <div class="main-body">
-    <div *ngIf="noResultsFound" class="no-results-message-container">
-        Element Not Found
+    <!-- When filtered if no results it displays this message -->
+    <div *ngIf="noResultsFound" class="no-results-message-container font">
+        <strong>Element Not Found</strong>
     </div>
     <div
       *ngFor="let container of (invertirOrden ? filteredContainers.slice().reverse() : filteredContainers); let i = index"
