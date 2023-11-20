@@ -11,9 +11,6 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 
 import { MatCardModule } from '@angular/material/card';
-import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
-import { environment } from '../environments/environment';
-import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { ConfirmationDialogComponent } from './components/confirmation-dialog/confirmation-dialog.component';
@@ -39,9 +36,7 @@ import { ContainerDetailsDialogComponent } from './components/container-details-
     MatCardModule,
     FormsModule,
     ReactiveFormsModule,
-    MatDialogModule,
-    provideFirebaseApp(() => initializeApp(environment.firebase)),
-    provideFirestore(() => getFirestore())
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
