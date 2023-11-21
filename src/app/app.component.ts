@@ -5,6 +5,7 @@ import { Container } from './interfaces/container.interface';
 import { ConfirmationDialogComponent } from './components/confirmation-dialog/confirmation-dialog.component';
 import { FormContainerWindowComponent } from './components/form-container-window/form-container-window.component';
 import { ContainerDetailsDialogComponent } from './components/container-details-dialog/container-details-dialog.component';
+import { SearchService } from './services/search.service';
 
 @Component({
   selector: 'app-root',
@@ -132,12 +133,15 @@ export class AppComponent {
     }
   ];
 
-  constructor(public dialog: MatDialog) { }
+  constructor(public dialog: MatDialog, private searchService: SearchService) { }
 
   title: string = 'huawei-repository';
   invertirOrden = false;
   rotateButtonState = 'normal';
   animationState = 'in';
+  searchTerm: string = '';
+  filteredContainers: Container[] = [];
+  noResultsFound: boolean = false;
 
   ngOnInit() {
     this.filteredContainers = this.containers;
@@ -199,18 +203,9 @@ export class AppComponent {
     });
   }
 
-  searchTerm: string = '';
-  filteredContainers: Container[] = [];
-  noResultsFound: boolean = false;
-
   performSearch() {
-    // Filtra los contenedores según el término de búsqueda
-    this.filteredContainers = this.containers.filter(container =>
-      container.elementName.toLowerCase().includes(this.searchTerm.toLowerCase()) ||
-      container.user.toLowerCase().includes(this.searchTerm.toLowerCase()) ||
-      container.workArea.toLowerCase().includes(this.searchTerm.toLowerCase())
-    );
-
+    this.filteredContainers = this.searchService.filterContainers(this.containers, this.searchTerm);
+  
     this.noResultsFound = this.filteredContainers.length === 0;
   }
   
