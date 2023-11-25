@@ -2,6 +2,8 @@ import { Component, Input, Inject } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Container } from '../../interfaces/container.interface';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { HttpClient } from '@angular/common/http';
+import { FetchDataService } from 'src/app/services/fetch-data/fetch-data.service';
 
 @Component({
   selector: 'app-form-container-window',
@@ -10,38 +12,66 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 })
 export class FormContainerWindowComponent {
 
-  
   @Input() containers: Container[] = [];
 
   containerForm: FormGroup;
 
   constructor(
+    private fetchData: FetchDataService,
+    private http: HttpClient,
     private fb: FormBuilder,
     public dialogRef: MatDialogRef<FormContainerWindowComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any
-    ) {
+  ) {
     this.containerForm = this.fb.group({
       elementName: ['', Validators.required],
       user: ['', Validators.required],
       date: [new Date(), Validators.required],
       workArea: ['', Validators.required],
       description: ['', Validators.required],
+      files: [null, Validators.required],
     });
   }
 
   onSubmitContainerForm() {
-    if (this.containerForm.valid) {
-      const newContainer: Container = { ...this.containerForm.value };
-      this.containers.push(newContainer);
-      this.resetContainerForm();
-      this.dialogRef.close(newContainer);
+    if (this.containerForm.valid && this.containerForm.get('files')?.value?.length > 0) {
+      const formData = new FormData();
+      const formValue = this.containerForm.value;
+
+      formData.append('elementName', formValue.elementName);
+      formData.append('user', formValue.user);
+      formData.append('date', formValue.date.toISOString()); // Convertir la fecha a formato ISO
+      formData.append('workArea', formValue.workArea);
+      formData.append('description', formValue.description);
+
+      // Agregar archivos al FormData
+      const files: FileList = formValue.files;
+      for (let i = 0; i < files.length; i++) {
+        formData.append('files', files[i]);
+      }
+
+      this.http.post('http://localhost:3010/upload', formData)
+        .subscribe(response => {
+          console.log('Files uploaded successfully:', response);
+          this.fetchData.fetchUploadedData(); // Actualizar datos después de cargar
+          this.resetContainerForm(); // Opcional: reiniciar el formulario después de la carga exitosa
+        }, error => {
+          console.error('Error uploading files:', error);
+        });
+    } else {
+      console.error('Form is not valid or no files selected');
+      console.log('Form validity:', this.containerForm.valid);
+      console.log('Selected files:', this.containerForm.get('files')?.value);
     }
   }
-  
+
+  onFileSelected(event: any) {
+    const files = event.target.files;
+    console.log(files);
+  }
+
   resetContainerForm() {
     this.containerForm.reset();
   }
-
-
 
 }

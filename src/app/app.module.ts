@@ -2,7 +2,9 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatDialogModule } from '@angular/material/dialog';
-import { SearchService } from './services/search.service';
+import { SearchService } from './services/search-data/search.service';
+import { GetDataService } from './services/get-data/get-data.service';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -37,9 +39,10 @@ import { ContainerDetailsDialogComponent } from './components/container-details-
     MatCardModule,
     FormsModule,
     ReactiveFormsModule,
-    MatDialogModule
+    MatDialogModule,
+    HttpClientModule
   ],
-  providers: [SearchService],
+  providers: [SearchService, GetDataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

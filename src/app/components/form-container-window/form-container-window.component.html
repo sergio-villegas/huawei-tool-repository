@@ -27,6 +27,10 @@
         <input type="text" id="description" name="description" class="custom-input-description"
             formControlName="description" placeholder="Describe your container: purpose, usage..."><br><br>
 
+        <!--File Upload-->
+        <label for="file" class="custom-label"><strong>Upload Files:</strong></label>
+        <input type="file" id="files" name="files" (change)="onFileSelected($event)" multiple required><br><br>
+
         <!--Submition button-->
         <input type="submit" class="blue-button-creation" value="Submit">
     </form>

@@ -1,8 +1,8 @@
 export interface Container {
-    elementId? : string;
-    elementName : string;
-    user : string;
-    date : Date;
-    workArea : string;
+    elementName: string;
+    user: string;
+    date: Date;
+    workArea: string;
     description: string;
+    files: { fileName: string }[];
 }

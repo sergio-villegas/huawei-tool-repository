@@ -1,7 +1,7 @@
 // search.service.ts
 
 import { Injectable } from '@angular/core';
-import { Container } from '../interfaces/container.interface';
+import { Container } from '../../interfaces/container.interface';
 
 @Injectable({
   providedIn: 'root',
