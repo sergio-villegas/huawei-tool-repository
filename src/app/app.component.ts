@@ -99,6 +99,7 @@ export class AppComponent {
     dialogRef.afterClosed().subscribe((newContainer: Container | undefined) => {
       if (newContainer) {
         this.containers.push(newContainer);
+        console.log('Dialog closed, data updated:', this.containers);
       }
     });
   }

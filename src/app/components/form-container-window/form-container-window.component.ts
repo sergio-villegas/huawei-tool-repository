@@ -34,13 +34,14 @@ export class FormContainerWindowComponent {
   }
 
   onSubmitContainerForm() {
+    console.log('Form value:', this.containerForm.value);
     if (this.containerForm.valid && this.containerForm.get('files')?.value?.length > 0) {
       const formData = new FormData();
       const formValue = this.containerForm.value;
 
       formData.append('elementName', formValue.elementName);
       formData.append('user', formValue.user);
-      formData.append('date', formValue.date.toISOString()); // Convertir la fecha a formato ISO
+      formData.append('date', new Date(formValue.date).toISOString());
       formData.append('workArea', formValue.workArea);
       formData.append('description', formValue.description);
 
@@ -55,9 +56,10 @@ export class FormContainerWindowComponent {
           console.log('Files uploaded successfully:', response);
           this.fetchData.fetchUploadedData(); // Actualizar datos después de cargar
           this.resetContainerForm(); // Opcional: reiniciar el formulario después de la carga exitosa
-        }, error => {
-          console.error('Error uploading files:', error);
-        });
+          this.dialogRef.close({ /* Puedes pasar cualquier dato que quieras devolver al componente principal */ });
+      }, error => {
+        console.error('Error uploading files:', error);
+      });
     } else {
       console.error('Form is not valid or no files selected');
       console.log('Form validity:', this.containerForm.valid);
@@ -67,7 +69,8 @@ export class FormContainerWindowComponent {
 
   onFileSelected(event: any) {
     const files = event.target.files;
-    console.log(files);
+    console.log('Selected files:', files);
+    this.containerForm.get('files')?.setValue(files);
   }
 
   resetContainerForm() {
