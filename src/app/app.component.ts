@@ -52,14 +52,17 @@ export class AppComponent {
   containers: Container[] = [];
 
   ngOnInit() {
-    this.fetchUploadedData();
-    this.filteredContainers = this.containers;
-    this.invertirOrden = !this.invertirOrden;
-    this.rotateButtonState = this.invertirOrden ? 'reversed' : 'normal';
-    setTimeout(() => {
-      this.animationState = 'in';
-    }, 1000);
+    this.fetchData.fetchUploadedData().subscribe((data: Container[]) => {
+      this.containers = data;
+      this.updateFilteredContainers();
+      this.invertirOrden = !this.invertirOrden;
+      this.rotateButtonState = this.invertirOrden ? 'reversed' : 'normal';
+      setTimeout(() => {
+        this.animationState = 'in';
+      }, 1000);
+    });
   }
+  
 
   toggleOrden() {
     this.invertirOrden = !this.invertirOrden;
@@ -99,6 +102,7 @@ export class AppComponent {
     dialogRef.afterClosed().subscribe((newContainer: Container | undefined) => {
       if (newContainer) {
         this.containers.push(newContainer);
+        this.updateFilteredContainers();
         console.log('Dialog closed, data updated:', this.containers);
       }
     });
@@ -111,6 +115,11 @@ export class AppComponent {
         container: container
       },
     });
+  }
+
+  updateFilteredContainers() {
+    this.filteredContainers = this.searchService.filterContainers(this.containers, this.searchTerm);
+    this.noResultsFound = this.filteredContainers.length === 0;
   }
 
   performSearch() {

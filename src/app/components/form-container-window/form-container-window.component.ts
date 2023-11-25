@@ -11,8 +11,8 @@ import { FetchDataService } from 'src/app/services/fetch-data/fetch-data.service
   styleUrls: ['./form-container-window.component.scss']
 })
 export class FormContainerWindowComponent {
-
-  @Input() containers: Container[] = [];
+  
+  containers: Container[] = [];
 
   containerForm: FormGroup;
 
