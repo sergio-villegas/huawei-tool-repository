@@ -33,6 +33,12 @@ export class FormContainerWindowComponent {
     });
   }
 
+  ngOnInit(): void {
+    // Manually set the backdrop styles
+    const backdrop = document.getElementsByClassName('cdk-overlay-backdrop')[0] as HTMLElement;
+    backdrop.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
+  }
+
   onSubmitContainerForm() {
     console.log('Form value:', this.containerForm.value);
     if (this.containerForm.valid && this.containerForm.get('files')?.value?.length > 0) {

@@ -63,3 +63,51 @@
   border-radius: 8px;
   margin-left: 5px;
 }
+
+.file-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.file-name {
+  margin-right: auto;
+}
+
+.file-icon {
+  cursor: pointer;
+  width: 45px;
+  height: 58.7px;
+}
+
+.center-button {
+  background-color: #ff7c1e;
+  color: azure;
+  padding: 3px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+}
+
+.center-button:hover {
+  background-color: #fdad00;
+}
+
+.close-button {
+  background-color: #005bb5;
+  color: azure;
+  padding: 3px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+  transform: scale(1.2);
+  margin-top: 20px;
+}
+
+.close-button:hover {
+  background-color: #1e90ff;
+}
