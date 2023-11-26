@@ -20,7 +20,6 @@ export class ContainerDetailsDialogComponent implements OnInit {
     // Manually set the backdrop styles
     const backdrop = document.getElementsByClassName('cdk-overlay-backdrop')[0] as HTMLElement;
     backdrop.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
-    this.cleanFileNames();
   }
 
   downloadFile(fileName: string): void {
@@ -58,10 +57,8 @@ export class ContainerDetailsDialogComponent implements OnInit {
     }
   }
 
-  cleanFileNames(): void {
-    this.data.container.files.forEach(file => {
-      file.fileName = file.fileName.replace(/^\d+_/, '');
-    });
+  cleanFileName(fileName: string): string {
+    return fileName.replace(/^\d+_/, '');
   }
 
   closeDialog(): void {

@@ -60,9 +60,9 @@ export class FormContainerWindowComponent {
       this.http.post('http://localhost:3010/upload', formData)
         .subscribe(response => {
           console.log('Files uploaded successfully:', response);
-          this.fetchData.fetchUploadedData(); // Actualizar datos después de cargar
-          this.resetContainerForm(); // Opcional: reiniciar el formulario después de la carga exitosa
-          this.dialogRef.close({ /* Puedes pasar cualquier dato que quieras devolver al componente principal */ });
+          this.fetchData.fetchUploadedData();
+          this.resetContainerForm();
+          this.dialogRef.close({ });
       }, error => {
         console.error('Error uploading files:', error);
       });

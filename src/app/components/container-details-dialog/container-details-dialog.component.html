@@ -16,7 +16,7 @@
     <div class="additional-content-container">
       <div *ngIf="data.container.files && data.container.files.length > 0">
         <div *ngFor="let file of data.container.files" class="file-container">
-          <span class="file-name font">{{ file.fileName }}</span>
+          <span class="file-name font">{{ cleanFileName(file.fileName) }}</span>
           <img [src]="getFileTypeImage(file.fileName)" alt="File Type" (click)="downloadFile(file.fileName) "
             class="file-icon" />
         </div>

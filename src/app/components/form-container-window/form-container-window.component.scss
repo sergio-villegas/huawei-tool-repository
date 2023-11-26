@@ -50,6 +50,7 @@
 
 .container {
     padding: 30px;
+    padding-bottom: 35px;
     height: 10px;
     text-align: center;
     line-height: 10px; /* Esto ayuda a centrar verticalmente el texto */
@@ -59,3 +60,31 @@
     color: azure;
 }
 
+.file-upload-container {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.file-upload-label {
+    margin-bottom: 8px;
+}
+
+.file-upload-input {
+    display: none;
+}
+
+.file-upload-btn {
+    background-color: #212529;
+    color: azure;
+    padding: 2px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: -10px;
+}
+
+.file-upload-btn:hover {
+    background-color: rgb(66, 66, 66);
+}
