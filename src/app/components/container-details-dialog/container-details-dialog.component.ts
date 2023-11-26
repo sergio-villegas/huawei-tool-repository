@@ -44,5 +44,17 @@ export class ContainerDetailsDialogComponent implements OnInit {
     // Download all files for the current container
     fileNames.forEach((fileName) => this.downloadFile(fileName));
   }
+
+  getFileTypeImage(fileName: string): string {
+    const fileExtension = fileName.split('.').pop()?.toLowerCase();
+
+    if (fileExtension === 'pdf') {
+      return '../../../assets/img/pdf.png';
+    } else if (fileExtension === 'rar') {
+      return 'assets/rar-icon.png'; // Ajusta la ruta según tu proyecto
+    } else {
+      return 'assets/default-icon.png'; // Icono predeterminado o manejo de otros tipos de archivo
+    }
+  }
   
 }
