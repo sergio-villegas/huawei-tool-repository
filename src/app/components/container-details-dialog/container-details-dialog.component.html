@@ -14,7 +14,14 @@
         <!-- Agrega más campos según sea necesario -->
       </div>
       <div class="additional-content-container">
-        <h2>Aqui se pondrian los documentos de manera grafica, y también la opcion de descargarlos</h2>
+        <div *ngIf="data.container.files && data.container.files.length > 0">
+          <p><strong>User: {{ data.container.user }}</strong></p>
+          <div *ngFor="let file of data.container.files">
+            <p>File Name: {{ file.fileName }}</p>
+            <button (click)="downloadFile(file.fileName)">Download</button>
+          </div>
+          <button (click)="downloadAllFiles(data.container)">Download All</button>
+        </div>
       </div>
     </div>
   </div>

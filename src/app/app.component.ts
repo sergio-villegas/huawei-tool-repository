@@ -9,6 +9,11 @@ import { SearchService } from './services/search-data/search.service';
 import { GetDataService } from './services/get-data/get-data.service';
 import { HttpClient } from '@angular/common/http';
 import { FetchDataService } from './services/fetch-data/fetch-data.service';
+import { ChangeDetectorRef } from '@angular/core';
+import { switchMap } from 'rxjs/operators';
+import { of } from 'rxjs';
+import { NgZone } from '@angular/core';
+
 
 @Component({
   selector: 'app-root',
@@ -35,11 +40,13 @@ import { FetchDataService } from './services/fetch-data/fetch-data.service';
 export class AppComponent {
 
   constructor(
+    private zone: NgZone,
     private fetchData: FetchDataService,
     public dialog: MatDialog,
     private searchService: SearchService,
     private getData: GetDataService,
-    private http: HttpClient) { }
+    private http: HttpClient,
+    private cdr: ChangeDetectorRef) { }
 
   title: string = 'huawei-repository';
   invertirOrden = false;
@@ -52,17 +59,20 @@ export class AppComponent {
   containers: Container[] = [];
 
   ngOnInit() {
-    this.fetchData.fetchUploadedData().subscribe((data: Container[]) => {
-      this.containers = data;
-      this.updateFilteredContainers();
-      this.invertirOrden = !this.invertirOrden;
-      this.rotateButtonState = this.invertirOrden ? 'reversed' : 'normal';
-      setTimeout(() => {
-        this.animationState = 'in';
-      }, 1000);
-    });
+    this.fetchData.fetchUploadedData().pipe(
+      switchMap((data: Container[]) => {
+        this.containers = data;
+        this.updateFilteredContainers();
+        this.invertirOrden = !this.invertirOrden;
+        this.rotateButtonState = this.invertirOrden ? 'reversed' : 'normal';
+        setTimeout(() => {
+          this.animationState = 'in';
+        }, 1000);
+        return of(data); // Devuelve los datos para la siguiente suscripción
+      })
+    ).subscribe();
   }
-  
+
 
   toggleOrden() {
     this.invertirOrden = !this.invertirOrden;
@@ -83,7 +93,7 @@ export class AppComponent {
         message: 'Are you sure you want to delete this container?',
       },
     });
-  
+
     dialogRef.afterClosed().subscribe((result) => {
       if (result) {
         this.deleteContainer(container);
@@ -101,11 +111,21 @@ export class AppComponent {
 
     dialogRef.afterClosed().subscribe((newContainer: Container | undefined) => {
       if (newContainer) {
-        this.containers.push(newContainer);
-        this.updateFilteredContainers();
-        console.log('Dialog closed, data updated:', this.containers);
+        this.fetchData.fetchUploadedData().subscribe((data: Container[]) => {
+          this.containers = data;
+          this.updateFilteredContainers();
+    
+          if (!this.invertirOrden) {
+            // Solo invertir si la lista está en estado normal
+            this.invertirOrden = !this.invertirOrden;
+            this.rotateButtonState = this.invertirOrden ? 'reversed' : 'normal';
+            this.animationState = 'in';
+          }
+        });
       }
     });
+    
+    
   }
 
   openContainerDetailsDialog(container: Container): void {
@@ -124,7 +144,7 @@ export class AppComponent {
 
   performSearch() {
     this.filteredContainers = this.searchService.filterContainers(this.containers, this.searchTerm);
-  
+
     this.noResultsFound = this.filteredContainers.length === 0;
   }
 
@@ -139,5 +159,5 @@ export class AppComponent {
       }
     );
   }
-  
+
 }
