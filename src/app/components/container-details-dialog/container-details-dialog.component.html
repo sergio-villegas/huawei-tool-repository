@@ -16,14 +16,14 @@
     <div class="additional-content-container">
       <div *ngIf="data.container.files && data.container.files.length > 0">
         <div *ngFor="let file of data.container.files" class="file-container">
-          <span class="file-name">{{ file.fileName }}</span>
+          <span class="file-name font">{{ file.fileName }}</span>
           <img [src]="getFileTypeImage(file.fileName)" alt="File Type" (click)="downloadFile(file.fileName) "
             class="file-icon" />
         </div>
         <button *ngIf="data.container.files.length > 1" (click)="downloadAllFiles(data.container)"
-          class="center-button">Download All</button>
+          class="center-button font">Download All</button>
       </div>
     </div>
   </div>
-  <button (click)="closeDialog()" class="close-button">Close</button>
+  <button (click)="closeDialog()" class="close-button font">Close</button>
 </div>
