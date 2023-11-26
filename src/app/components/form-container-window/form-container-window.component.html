@@ -3,30 +3,49 @@
 </div>
 <div class="formularioContainer">
     <form [formGroup]="containerForm" (ngSubmit)="onSubmitContainerForm()">
+
         <!--Container Name-->
-        <label for="elementName" class="custom-label"><strong>Container name:</strong></label>
-        <input autocomplete="off" type="text" id="elementName" name="elementName" class="custom-input-large" formControlName="elementName"
-            placeholder="Enter the name of your container..."><br><br>
+        <label for="elementName" class="custom-label"
+            [ngClass]="{'invalid-field': containerForm.get('elementName')?.invalid && containerForm.get('elementName')?.touched}">
+            <strong>Container name:</strong>
+        </label>
+        <input autocomplete="off" type="text" id="elementName" name="elementName" class="custom-input-large"
+            formControlName="elementName" placeholder="Enter the name of your container..."
+            [ngClass]="{'invalid-field': containerForm.get('elementName')?.invalid && containerForm.get('elementName')?.touched}">
+        <br><br>
 
         <!--User-->
-        <label for="user" class="custom-label"><strong>User:</strong></label>
-        <input autocomplete="off" type="text" id="user" name="user" class="custom-input-short-separation" formControlName="user"
-            placeholder="Enter your user ID...">
+        <label for="user" class="custom-label"
+            [ngClass]="{'invalid-field': containerForm.get('user')?.invalid && containerForm.get('user')?.touched}">
+            <strong>User:</strong>
+        </label>
+        <input autocomplete="off" type="text" id="user" name="user" class="custom-input-short-separation"
+            formControlName="user" placeholder="Enter your user ID..."
+            [ngClass]="{'invalid-field': containerForm.get('user')?.invalid && containerForm.get('user')?.touched}">
 
         <!--Date-->
-        <label for="date" class="custom-label"><strong>Date:</strong></label>
-        <input autocomplete="off" type="date" id="date" name="date" class="custom-input-short-separation" formControlName="date" required>
+        <label for="date" class="custom-label-work-area"><strong>Date:</strong></label>
+        <input autocomplete="off" type="date" id="date" name="date" class="custom-input-short-separation-right"
+            formControlName="date" required>
 
         <!--Work Area-->
-        <label for="workArea" class="custom-label"><strong>Work Area:</strong></label>
-        <input autocomplete="off" type="text" id="workArea" name="workArea" class="custom-input-short" formControlName="workArea"
-            placeholder="Enter your working area..."><br><br>
+        <label for="workArea" class="custom-label-work-area"><strong>Work Area:</strong></label>
+        <mat-form-field appearance="fill" class="custom-input-short-separation-work-area">
+            <mat-label>Select Work Area</mat-label>
+            <mat-select formControlName="workArea">
+                <mat-option *ngFor="let area of workAreas" [value]="area">{{ area }}</mat-option>
+            </mat-select>
+        </mat-form-field>
 
         <!--Description-->
-        <label for="description" class="custom-label"><strong>Description:</strong></label>
+        <label for="description" class="custom-label"
+            [ngClass]="{'invalid-field': containerForm.get('description')?.invalid && containerForm.get('description')?.touched}">
+            <strong>Description:</strong>
+        </label>
         <input autocomplete="off" type="text" id="description" name="description" class="custom-input-description"
-            formControlName="description" placeholder="Describe your container: purpose, usage..."><br><br>
-
+            formControlName="description" placeholder="Describe your container: purpose, usage..."
+            [ngClass]="{'invalid-field': containerForm.get('description')?.invalid && containerForm.get('description')?.touched}">
+        <br><br>
         <!-- File Upload -->
         <div class="file-upload-container">
             <label for="files" class="file-upload-label font"><strong>Upload Files:</strong></label>

@@ -5,9 +5,10 @@
     box-sizing: border-box;
 }
 
-.custom-label, .font {
+.custom-label,
+.font {
     display: inline-block;
-    width: 130px;
+    width: 140px;
     transform: scale(1.15);
     font-family: 'Arial';
 }
@@ -17,8 +18,7 @@
     width: calc(100% - 143px);
 }
 
-.custom-input-description
-{
+.custom-input-description {
     width: calc(100% - 143px);
 }
 
@@ -29,6 +29,10 @@
 .custom-input-short-separation {
     width: 218px;
     margin-right: 66px;
+}
+
+.custom-input-short-separation-work-area {
+    width: 218px;
 }
 
 
@@ -53,8 +57,10 @@
     padding-bottom: 35px;
     height: 10px;
     text-align: center;
-    line-height: 10px; /* Esto ayuda a centrar verticalmente el texto */
-    background-color: rgb(86, 83, 83); /* Puedes ajustar el color de fondo según tus preferencias */
+    line-height: 10px;
+    /* Esto ayuda a centrar verticalmente el texto */
+    background-color: rgb(86, 83, 83);
+    /* Puedes ajustar el color de fondo según tus preferencias */
     font-family: 'Arial';
     font-size: 2rem;
     color: azure;
@@ -87,4 +93,28 @@
 
 .file-upload-btn:hover {
     background-color: rgb(66, 66, 66);
+}
+
+.mat-form-field {
+    width: 100%;    
+
+    .mat-select {
+        width: 100%;
+    }
+}
+
+.custom-input-short-separation-right {
+    margin-right: 100px;
+}
+
+.custom-label-work-area {
+    display: inline-block;
+    width: 100px;
+    transform: scale(1.15);
+    font-family: 'Arial';
+    margin-left: 40px;
+}
+
+.invalid-field {
+    border-color: red;
 }

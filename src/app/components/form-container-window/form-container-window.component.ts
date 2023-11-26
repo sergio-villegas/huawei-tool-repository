@@ -11,9 +11,8 @@ import { FetchDataService } from 'src/app/services/fetch-data/fetch-data.service
   styleUrls: ['./form-container-window.component.scss']
 })
 export class FormContainerWindowComponent {
-  
-  containers: Container[] = [];
 
+  containers: Container[] = [];
   containerForm: FormGroup;
 
   constructor(
@@ -32,6 +31,9 @@ export class FormContainerWindowComponent {
       files: [null, Validators.required],
     });
   }
+
+  // Array of options for Work Area
+  workAreas: string[] = ['MBB', 'FBB', 'GNOC', 'IT', 'RF', 'HR', 'NFV'];
 
   ngOnInit(): void {
     // Manually set the backdrop styles
@@ -62,10 +64,10 @@ export class FormContainerWindowComponent {
           console.log('Files uploaded successfully:', response);
           this.fetchData.fetchUploadedData();
           this.resetContainerForm();
-          this.dialogRef.close({ });
-      }, error => {
-        console.error('Error uploading files:', error);
-      });
+          this.dialogRef.close({});
+        }, error => {
+          console.error('Error uploading files:', error);
+        });
     } else {
       console.error('Form is not valid or no files selected');
       console.log('Form validity:', this.containerForm.valid);

@@ -48,15 +48,15 @@ export class AppComponent {
     private http: HttpClient,
     private cdr: ChangeDetectorRef) { }
 
-  title: string = 'huawei-repository';
-  invertirOrden = false;
-  rotateButtonState = 'normal';
-  animationState = 'in';
-  searchTerm: string = '';
   filteredContainers: Container[] = [];
+  title: string = 'huawei-repository';
   noResultsFound: boolean = false;
-  selectedFiles: File[] = [];
   containers: Container[] = [];
+  rotateButtonState = 'normal';
+  selectedFiles: File[] = [];
+  searchTerm: string = '';
+  invertirOrden = false;
+  animationState = 'in';
 
   ngOnInit() {
     this.fetchData.fetchUploadedData().pipe(
@@ -114,7 +114,7 @@ export class AppComponent {
         this.fetchData.fetchUploadedData().subscribe((data: Container[]) => {
           this.containers = data;
           this.updateFilteredContainers();
-    
+
           if (!this.invertirOrden) {
             // Solo invertir si la lista está en estado normal
             this.invertirOrden = !this.invertirOrden;
@@ -124,8 +124,8 @@ export class AppComponent {
         });
       }
     });
-    
-    
+
+
   }
 
   openContainerDetailsDialog(container: Container): void {
