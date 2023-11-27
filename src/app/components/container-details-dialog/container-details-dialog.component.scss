@@ -114,3 +114,11 @@
 .close-button:hover {
   background-color: #1e90ff;
 }
+
+.container-info-label, .files-info-label {
+  width: 50%;
+  box-sizing: border-box;
+  float: left;
+  text-align: center;
+  margin-bottom: -15px;
+}

@@ -79,10 +79,24 @@ export class FormContainerWindowComponent {
     const files = event.target.files;
     console.log('Selected files:', files);
     this.containerForm.get('files')?.setValue(files);
+
+    const label = document.getElementById('file-upload-label');
+
+    if (label) {
+      if (files.length > 0) {
+        label.textContent = `${files.length} files selected`;
+      } else {
+        label.textContent = 'Choose Files';
+      }
+    }
   }
 
   resetContainerForm() {
     this.containerForm.reset();
+  }
+
+  closeDialog(): void {
+    this.dialogRef.close();
   }
 
 }

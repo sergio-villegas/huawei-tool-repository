@@ -1,16 +1,22 @@
-<div class="container-details">
+<div class="container-details font">
   <div class="title">
     <span>{{ data.container.elementName }}</span>
   </div>
   <div class="separator"></div>
+  <div class="container-info-label font">
+    <h2>Container information:</h2>
+  </div>
+  <div class="files-info-label font">
+    <h2>Files:</h2>
+  </div>
   <div class="content-container">
     <div class="sub-title-container">
       <div class="subtitle-container">
-        <p class="sub-title-left"><strong>User:</strong> {{ data.container.user }}</p>
-        <p class="sub-title"><strong>Work Area:</strong> {{ data.container.workArea }}</p>
+        <p class="sub-title-left font"><strong>User:</strong> {{ data.container.user }}</p>
+        <p class="sub-title font"><strong>Work Area:</strong> {{ data.container.workArea }}</p>
       </div>
-      <p class="sub-title"><strong>Date:</strong> {{ data.container.date | date: 'EEEE, MMMM d, y' }}</p>
-      <p class="sub-title-description"><strong>Description:</strong> {{ data.container.description }}</p>
+      <p class="sub-title font"><strong>Date:</strong> {{ data.container.date | date: 'EEEE, MMMM d, y' }}</p>
+      <p class="sub-title-description font"><strong>Description:</strong> {{ data.container.description }}</p>
       <!-- Agrega más campos según sea necesario -->
     </div>
     <div class="additional-content-container">
