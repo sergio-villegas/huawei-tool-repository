@@ -49,7 +49,7 @@ export class AppComponent {
     private cdr: ChangeDetectorRef) { }
 
   filteredContainers: Container[] = [];
-  title: string = 'huawei-repository';
+  title: string = 'huawei-tool-repository';
   noResultsFound: boolean = false;
   containers: Container[] = [];
   rotateButtonState = 'normal';
