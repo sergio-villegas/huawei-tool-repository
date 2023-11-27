@@ -45,17 +45,32 @@ export class ContainerDetailsDialogComponent implements OnInit {
     fileNames.forEach((fileName) => this.downloadFile(fileName));
   }
 
-  getFileTypeImage(fileName: string): string {
+  getFileTypeImage(fileName: string): { path: string; className: string } {
     const fileExtension = fileName.split('.').pop()?.toLowerCase();
-
+  
     if (fileExtension === 'pdf') {
-      return '../../../assets/img/pdf.png';
-    } else if (fileExtension === 'rar') {
-      return 'assets/rar-icon.png'; // Ajusta la ruta según tu proyecto
-    } else {
-      return 'assets/default-icon.png'; // Icono predeterminado o manejo de otros tipos de archivo
+      return { path: '../../../assets/img/pdf.png', className: 'file-icon' };
+    } 
+    else if (fileExtension === 'txt') {
+      return { path: '../../../assets/img/txt.png', className: 'file-icon-txt' };
+    } 
+    else if (fileExtension === 'xlsx') {
+      return { path: '../../../assets/img/xlsx.png', className: 'file-icon-office' };
+    }
+    else if (fileExtension === 'pptx') {
+      return { path: '../../../assets/img/pptx.png', className: 'file-icon-office' };
+    }
+    else if (fileExtension === 'docx') {
+      return { path: '../../../assets/img/docx.png', className: 'file-icon-office' };
+    }
+    else if (fileExtension === 'rar') {
+      return { path: '../../../assets/img/rar.png', className: 'file-icon-rar' };
+    } 
+    else {
+      return { path: 'assets/default-icon.png', className: 'file-icon' };
     }
   }
+  
 
   cleanFileName(fileName: string): string {
     return fileName.replace(/^\d+_/, '');

@@ -79,8 +79,26 @@
 
 .file-icon {
   cursor: pointer;
+  width: 40px;
+  height: 48.7px;
+}
+
+.file-icon-office {
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+}
+
+.file-icon-txt {
+  cursor: pointer;
   width: 45px;
-  height: 58.7px;
+  height: 45px;
+}
+
+.file-icon-rar {
+  cursor: pointer;
+  width: 45px;
+  height: 45px;
 }
 
 .center-button {

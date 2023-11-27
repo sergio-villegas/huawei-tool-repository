@@ -23,8 +23,11 @@
       <div *ngIf="data.container.files && data.container.files.length > 0">
         <div *ngFor="let file of data.container.files" class="file-container">
           <span class="file-name font">{{ cleanFileName(file.fileName) }}</span>
-          <img [src]="getFileTypeImage(file.fileName)" alt="File Type" (click)="downloadFile(file.fileName) "
-            class="file-icon" />
+          <img [src]="getFileTypeImage(file.fileName).path" 
+               [alt]="'File Type ' + file.fileName"
+               [ngClass]="getFileTypeImage(file.fileName).className"
+               (click)="downloadFile(file.fileName)"
+               class="file-icon" />
         </div>
         <button *ngIf="data.container.files.length > 1" (click)="downloadAllFiles(data.container)"
           class="center-button font">Download All</button>
