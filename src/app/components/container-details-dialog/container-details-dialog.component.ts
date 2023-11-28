@@ -67,7 +67,7 @@ export class ContainerDetailsDialogComponent implements OnInit {
       return { path: '../../../assets/img/rar.png', className: 'file-icon-rar' };
     } 
     else {
-      return { path: 'assets/default-icon.png', className: 'file-icon' };
+      return { path: '../../../assets/img/default-icon.png', className: 'default-file-icon' };
     }
   }
   
