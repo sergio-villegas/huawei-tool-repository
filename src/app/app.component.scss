@@ -163,3 +163,30 @@
     border-color: #66afe9;
   }
 }
+
+.pagination-container {
+  display: flex;
+  justify-content: flex-end; // Align to the right
+  align-items: center;
+  margin: -12px 60px 10px 0;
+}
+
+.pagination-button {
+
+  padding: 3px 15px 3px 15px;
+  border-radius: 4px;
+  background-color: #212529;
+  color: azure;
+  margin: 10px;
+
+  &:hover {
+    background-color: #3e4246;
+  }
+
+  &:disabled {
+    background-color: #bdc3c7;
+    color: #7f8c8d;
+    cursor: not-allowed;
+  }
+}
+

@@ -35,7 +35,7 @@ import { ContainerDetailsDialogComponent } from './components/container-details-
     ConfirmationDialogComponent,
     FormContainerWindowComponent,
     CreditSectionComponent,
-    ContainerDetailsDialogComponent
+    ContainerDetailsDialogComponent,
   ],
   imports: [
     BrowserModule,

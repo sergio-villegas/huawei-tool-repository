@@ -144,8 +144,11 @@ export class AppComponent {
 
   performSearch() {
     this.filteredContainers = this.searchService.filterContainers(this.containers, this.searchTerm);
-
     this.noResultsFound = this.filteredContainers.length === 0;
+
+    if (this.currentPage > this.totalPages()) {
+      this.currentPage = 1;
+    }
   }
 
   fetchUploadedData(): void {
@@ -158,6 +161,33 @@ export class AppComponent {
         console.error('Error fetching data:', error);
       }
     );
+  }
+
+  pageSize: number = 8;
+  currentPage: number = 1;
+
+  getItems(): Container[] {
+    const startIndex = (this.currentPage - 1) * this.pageSize;
+    const endIndex = startIndex + this.pageSize;
+    return this.filteredContainers.slice(startIndex, endIndex);
+  }
+
+  nextPage(): void {
+    if (this.currentPage < this.totalPages()) {
+      this.currentPage++;
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  }
+  
+  prevPage(): void {
+    if (this.currentPage > 1) {
+      this.currentPage--;
+    }
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+  
+  totalPages(): number {
+    return Math.ceil(this.filteredContainers.length / this.pageSize);
   }
 
 }
