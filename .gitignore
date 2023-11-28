@@ -48,3 +48,14 @@ Thumbs.db
 
 # Server files
 /server/uploads/
+
+# No uploads files since creation
+tsconfig.spec.json
+tsconfig.json
+tsconfig.app.json
+firestore.rules
+firestore.indexes.json
+firebase.json
+.firebaserc
+.editorconfig
+/.vscode
