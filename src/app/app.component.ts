@@ -163,7 +163,7 @@ export class AppComponent {
     );
   }
 
-  pageSize: number = 8;
+  pageSize: number = 12;
   currentPage: number = 1;
 
   getItems(): Container[] {
@@ -188,6 +188,15 @@ export class AppComponent {
   
   totalPages(): number {
     return Math.ceil(this.filteredContainers.length / this.pageSize);
+  }
+
+  inputPage: number = 1; // Initialize with a default value
+
+  goToPage() {
+    if (this.inputPage >= 1 && this.inputPage <= this.totalPages()) {
+      this.currentPage = this.inputPage;
+      // Add logic to fetch data for the new page or update content accordingly
+    }
   }
 
 }

@@ -559,5 +559,314 @@
         "fileName": "1701329424567_Project_Kickoff_Meeting_Agenda.docx"
       }
     ]
+  },
+  {
+    "elementName": "Green Office Initiative Handbook",
+    "user": "g11223344",
+    "date": "2024-04-10T00:00:00.000Z",
+    "workArea": "Sustainability",
+    "description": "Handbook outlining practices and policies for promoting a green and eco-friendly office environment.",
+    "files": [
+      {
+        "fileName": "1701330656789_Green_Office_Handbook.pdf"
+      }
+    ]
+  },
+  {
+    "elementName": "Time Management Workshop Materials",
+    "user": "t99887766",
+    "date": "2024-04-15T00:00:00.000Z",
+    "workArea": "HR",
+    "description": "Materials for a workshop focused on effective time management skills for increased productivity and work-life balance.",
+    "files": [
+      {
+        "fileName": "1701330767890_Time_Management_Workshop_Slides.pptx"
+      },
+      {
+        "fileName": "1701330767891_Time_Management_Tips.docx"
+      }
+    ]
+  },
+  {
+    "elementName": "Incident Response Plan",
+    "user": "i11223344",
+    "date": "2024-04-18T00:00:00.000Z",
+    "workArea": "IT",
+    "description": "Document outlining the organization's incident response plan, ensuring a swift and effective response to security incidents.",
+    "files": [
+      {
+        "fileName": "1701330878901_Incident_Response_Plan.pdf"
+      }
+    ]
+  },
+  {
+    "elementName": "AI in Marketing Strategies",
+    "user": "a99887766",
+    "date": "2024-04-22T00:00:00.000Z",
+    "workArea": "Marketing",
+    "description": "Strategies for incorporating artificial intelligence in marketing campaigns for enhanced targeting and personalization.",
+    "files": [
+      {
+        "fileName": "1701330989012_AI_Marketing_Strategies_Guide.pdf"
+      },
+      {
+        "fileName": "1701330989013_AI_Marketing_Case_Studies.docx"
+      }
+    ]
+  },
+  {
+    "elementName": "Employee Recognition Program",
+    "user": "e11223344",
+    "date": "2024-04-25T00:00:00.000Z",
+    "workArea": "HR",
+    "description": "Introduction and guidelines for the employee recognition program, fostering a positive and appreciative workplace culture.",
+    "files": [
+      {
+        "fileName": "1701331090123_Employee_Recognition_Program_Guide.docx"
+      }
+    ]
+  },
+  {
+    "elementName": "Project Management Software Comparison",
+    "user": "p99887766",
+    "date": "2024-04-28T00:00:00.000Z",
+    "workArea": "PM",
+    "description": "Comparison document highlighting features and benefits of various project management software options.",
+    "files": [
+      {
+        "fileName": "1701331201234_Project_Management_Software_Comparison.xlsx"
+      }
+    ]
+  },
+  {
+    "elementName": "Effective Communication Workshop",
+    "user": "e11223344",
+    "date": "2024-05-02T00:00:00.000Z",
+    "workArea": "Training",
+    "description": "Materials for a workshop focused on enhancing communication skills for better collaboration and understanding.",
+    "files": [
+      {
+        "fileName": "1701331312345_Effective_Communication_Workshop_Slides.pptx"
+      },
+      {
+        "fileName": "1701331312346_Communication_Tips.pdf"
+      }
+    ]
+  },
+  {
+    "elementName": "Agile Development Principles",
+    "user": "a99887766",
+    "date": "2024-05-05T00:00:00.000Z",
+    "workArea": "IT",
+    "description": "Principles and practices of agile development for teams aiming to adopt agile methodologies in project management.",
+    "files": [
+      {
+        "fileName": "1701331423456_Agile_Development_Principles_Guide.docx"
+      }
+    ]
+  },
+  {
+    "elementName": "Employee Satisfaction Survey",
+    "user": "e11223344",
+    "date": "2024-05-08T00:00:00.000Z",
+    "workArea": "HR",
+    "description": "Survey document designed to collect feedback from employees regarding job satisfaction, workplace environment, and suggestions for improvement.",
+    "files": [
+      {
+        "fileName": "1701331534567_Employee_Satisfaction_Survey_Form.docx"
+      }
+    ]
+  },
+  {
+    "elementName": "Data Privacy Training Resources",
+    "user": "d99887766",
+    "date": "2024-05-12T00:00:00.000Z",
+    "workArea": "Legal",
+    "description": "Training resources on data privacy legal requirements, ensuring compliance with regulations and protecting sensitive information.",
+    "files": [
+      {
+        "fileName": "1701331645678_Data_Privacy_Training_Materials.zip"
+      }
+    ]
+  },
+  {
+    "elementName": "Leadership Development Program",
+    "user": "l99887766",
+    "date": "2024-05-15T00:00:00.000Z",
+    "workArea": "HR",
+    "description": "Program designed to nurture leadership skills among employees, offering training sessions and mentorship opportunities.",
+    "files": [
+      {
+        "fileName": "1701331756789_Leadership_Development_Program_Guide.pdf"
+      },
+      {
+        "fileName": "1701331756790_Leadership_Workbook.docx"
+      },
+      {
+        "fileName": "1701331756791_Leadership_Mentorship_Guidelines.pdf"
+      }
+    ]
+  },
+  {
+    "elementName": "Cybersecurity Best Practices Handbook",
+    "user": "c11223344",
+    "date": "2024-05-18T00:00:00.000Z",
+    "workArea": "IT",
+    "description": "Comprehensive handbook outlining best practices for maintaining cybersecurity in the workplace, protecting against cyber threats.",
+    "files": [
+      {
+        "fileName": "1701331867901_Cybersecurity_Best_Practices_Handbook.pdf"
+      },
+      {
+        "fileName": "1701331867902_Cybersecurity_Checklist.docx"
+      },
+      {
+        "fileName": "1701331867903_Security_Awareness_Training_Slides.pptx"
+      }
+    ]
+  },
+  {
+    "elementName": "Marketing Campaign Analytics Report",
+    "user": "m99887766",
+    "date": "2024-05-22T00:00:00.000Z",
+    "workArea": "Marketing",
+    "description": "Detailed analytics report on the performance of recent marketing campaigns, providing insights for future strategy.",
+    "files": [
+      {
+        "fileName": "1701331979012_Marketing_Analytics_Report.xlsx"
+      },
+      {
+        "fileName": "1701331979013_Customer_Segmentation_Analysis.pptx"
+      },
+      {
+        "fileName": "1701331979014_Social_Media_Trends_Report.pdf"
+      }
+    ]
+  },
+  {
+    "elementName": "Employee Onboarding Handbook",
+    "user": "e11223344",
+    "date": "2024-05-25T00:00:00.000Z",
+    "workArea": "HR",
+    "description": "Comprehensive handbook for onboarding new employees, covering policies, procedures, and resources for a smooth integration.",
+    "files": [
+      {
+        "fileName": "1701332090123_Onboarding_Handbook.pdf"
+      },
+      {
+        "fileName": "1701332090124_New_Employee_Checklist.docx"
+      },
+      {
+        "fileName": "1701332090125_Welcome_Presentation.pptx"
+      }
+    ]
+  },
+  {
+    "elementName": "Project Kickoff Meeting Presentation",
+    "user": "p99887766",
+    "date": "2024-05-28T00:00:00.000Z",
+    "workArea": "PM",
+    "description": "Presentation materials for the kickoff meeting of a new project, setting the stage for successful collaboration.",
+    "files": [
+      {
+        "fileName": "1701332201234_Project_Kickoff_Presentation.pptx"
+      },
+      {
+        "fileName": "1701332201235_Project_Timeline.xlsx"
+      },
+      {
+        "fileName": "1701332201236_Team_Roles_and_Responsibilities.docx"
+      }
+    ]
+  },
+  {
+    "elementName": "Corporate Social Responsibility Guidelines",
+    "user": "c11223344",
+    "date": "2024-06-01T00:00:00.000Z",
+    "workArea": "Sustainability",
+    "description": "Guidelines for implementing corporate social responsibility initiatives, contributing to social and environmental sustainability.",
+    "files": [
+      {
+        "fileName": "1701332312345_CSR_Guidelines.pdf"
+      },
+      {
+        "fileName": "1701332312346_Community_Impact_Report.pptx"
+      },
+      {
+        "fileName": "1701332312347_Sustainability_Action_Plan.docx"
+      }
+    ]
+  },
+  {
+    "elementName": "Product Launch Marketing Plan",
+    "user": "m99887766",
+    "date": "2024-06-04T00:00:00.000Z",
+    "workArea": "Marketing",
+    "description": "Comprehensive marketing plan for the launch of a new product, outlining strategies for promotion and market penetration.",
+    "files": [
+      {
+        "fileName": "1701332423456_Product_Launch_Plan.docx"
+      },
+      {
+        "fileName": "1701332423457_Marketing_Campaign_Timeline.xlsx"
+      },
+      {
+        "fileName": "1701332423458_Target_Audience_Analysis.pptx"
+      }
+    ]
+  },
+  {
+    "elementName": "Workplace Safety Training Materials",
+    "user": "w11223344",
+    "date": "2024-06-08T00:00:00.000Z",
+    "workArea": "Safety",
+    "description": "Training materials for promoting workplace safety, covering emergency procedures, hazard awareness, and employee well-being.",
+    "files": [
+      {
+        "fileName": "1701332534567_Workplace_Safety_Training_Slides.pptx"
+      },
+      {
+        "fileName": "1701332534568_Emergency_Response_Plan.docx"
+      },
+      {
+        "fileName": "1701332534569_Safety_Checklist.pdf"
+      }
+    ]
+  },
+  {
+    "elementName": "Budget Planning Workshop Materials",
+    "user": "b99887766",
+    "date": "2024-06-12T00:00:00.000Z",
+    "workArea": "Finance",
+    "description": "Materials for a workshop focused on effective budget planning, providing insights and strategies for financial management.",
+    "files": [
+      {
+        "fileName": "1701332645678_Budget_Planning_Workshop_Slides.pptx"
+      },
+      {
+        "fileName": "1701332645679_Financial_Planning_Guide.docx"
+      },
+      {
+        "fileName": "1701332645680_Budget_Template.xlsx"
+      }
+    ]
+  },
+  {
+    "elementName": "Customer Feedback Analysis Report",
+    "user": "c11223344",
+    "date": "2024-06-15T00:00:00.000Z",
+    "workArea": "CS",
+    "description": "Analysis report on customer feedback, highlighting key insights, trends, and areas for improvement in products and services.",
+    "files": [
+      {
+        "fileName": "1701332756789_Customer_Feedback_Analysis_Report.xlsx"
+      },
+      {
+        "fileName": "1701332756790_Customer_Satisfaction_Survey_Results.pptx"
+      },
+      {
+        "fileName": "1701332756791_Service_Improvement_Plan.docx"
+      }
+    ]
   }
 ]

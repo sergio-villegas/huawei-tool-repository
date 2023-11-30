@@ -171,6 +171,19 @@
   margin: -12px 60px 10px 0;
 }
 
+.pagination-button-go {
+  
+  padding: 3px 15px 3px 15px;
+  border-radius: 4px;
+  background-color: rgb(255, 106, 0);
+  color: azure;
+  margin: 10px;
+
+  &:hover {
+    background-color: orange;
+  }
+}
+
 .pagination-button {
 
   padding: 3px 15px 3px 15px;
