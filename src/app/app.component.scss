@@ -203,3 +203,26 @@
   }
 }
 
+h3.font {
+  white-space: pre-wrap;
+  min-height: 3.25rem; // Set the minimum height
+  display: -webkit-box;
+  -webkit-line-clamp: 3; // Number of lines to show
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.multiline {
+  max-height: 3em; // Maximum height for multiline
+  overflow: hidden;
+  position: relative;
+
+  &:after {
+    content: '...';  // Ellipsis content
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding-left: 1em;  // Space for the ellipsis
+    background: linear-gradient(to right, transparent, #F5F5F5 75%);  // Fade effect
+  }
+}

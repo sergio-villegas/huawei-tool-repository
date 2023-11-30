@@ -31,7 +31,9 @@
     </div>
     <div *ngFor="let container of (invertirOrden ? getItems().slice().reverse() : getItems()); let i = index"
       class="container-huawei-repository-element-box">
-      <h3 class="font">{{ container.elementName }}</h3>
+      <h3 class="font" [ngClass]="{'multiline': container.elementName.length > 100}">
+        {{ container.elementName }}
+      </h3>
       <!-- Visual line that separates the information visually -->
       <div class="separator"></div>
       <!-- Container information deployment -->
@@ -51,24 +53,23 @@
       </div>
     </div>
 
-    <div *ngIf="!noResultsFound" class="pagination-container">
-      <button class="pagination-button" (click)="prevPage()" [disabled]="currentPage === 1">
-        Previous
-      </button>
-      <span>
-        Page
-        <input type="number" [(ngModel)]="inputPage" min="1" [max]="totalPages()" />
-        of {{ totalPages() }}
-      </span>
-      <button class="pagination-button-go" (click)="goToPage()">
-        Go
-      </button>
-      <button class="pagination-button" (click)="nextPage()" [disabled]="currentPage === totalPages()">
-        Next
-      </button>
-    </div>
-    
+  </div>
 
+  <div *ngIf="!noResultsFound" class="pagination-container">
+    <button class="pagination-button" (click)="prevPage()" [disabled]="currentPage === 1">
+      Previous
+    </button>
+    <span>
+      Page
+      <input type="number" [(ngModel)]="inputPage" min="1" [max]="totalPages()" />
+      of {{ totalPages() }}
+    </span>
+    <button class="pagination-button-go" (click)="goToPage()">
+      Go
+    </button>
+    <button class="pagination-button" (click)="nextPage()" [disabled]="currentPage === totalPages()">
+      Next
+    </button>
   </div>
 
   <app-credit-section></app-credit-section>
