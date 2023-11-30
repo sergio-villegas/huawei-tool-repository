@@ -3,11 +3,10 @@ const cors = require('cors');
 const multer = require('multer');
 const path = require('path');
 const fs = require('fs');
+const dataFilePath = 'data-container.json';
 
 const app = express();
 const port = 3010;
-
-app.use(cors());
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
@@ -20,7 +19,15 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage: storage });
 
-const uploadedFiles = [];
+
+let uploadedFiles = [];
+
+app.use(cors());
+
+if (fs.existsSync(dataFilePath)) {
+  const data = fs.readFileSync(dataFilePath, 'utf-8');
+  uploadedFiles = JSON.parse(data);
+}
 
 app.post('/upload', upload.array('files', 5), (req, res) => {
   const files = req.files;
@@ -74,4 +81,9 @@ app.get('/', (req, res) => {
 
 app.listen(port, () => {
   console.log(`Server is running at http://localhost:${port}`);
+});
+
+process.on('SIGINT', () => {
+  fs.writeFileSync(dataFilePath, JSON.stringify(uploadedFiles, null, 2), 'utf-8');
+  process.exit();
 });

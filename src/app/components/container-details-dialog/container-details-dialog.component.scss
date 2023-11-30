@@ -95,7 +95,13 @@
   height: 45px;
 }
 
-.file-icon-rar, .default-file-icon {
+.file-icon-rar {
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+}
+
+.default-file-icon {
   cursor: pointer;
   width: 45px;
   height: 45px;

@@ -1,0 +1,563 @@
+[
+  {
+    "elementName": "Check-in and Check-out in your phone",
+    "user": "q84519637",
+    "date": "2023-10-02T00:00:00.000Z",
+    "workArea": "HR",
+    "description": "This guide will lead you how to configure your device whether Android or Apple in order to mark your attendance during working hours and how to notice if you have not checked out-in certain days.",
+    "files": [
+      {
+        "fileName": "1701321714530_Configure your phone for enabling check-in and check-out in the enterprise.pdf"
+      }
+    ]
+  },
+  {
+    "elementName": "Bus routes Huawei A, B and D building Nov-Dec 2023",
+    "user": "e75395184",
+    "date": "2023-10-29T00:00:00.000Z",
+    "workArea": "HR",
+    "description": "Bus routes scheduled during November and December of 2023, new routes based on the form sent last week.",
+    "files": [
+      {
+        "fileName": "1701321817333_Bus routes 2024.pptx"
+      },
+      {
+        "fileName": "1701321817334_Schedule 2024.xlsx"
+      }
+    ]
+  },
+  {
+    "elementName": "TOOL_FBB-IP_DEVICE_CONFIGURATION",
+    "user": "s84968741",
+    "date": "2023-11-21T00:00:00.000Z",
+    "workArea": "FBB",
+    "description": "This rar is focused on how to set the configuration of Cisco switches to Huawei swithced in order to improve the performance and the bandwidth for the client.",
+    "files": [
+      {
+        "fileName": "1701322249744_TOOL_FBB-IP_DEVICE_CONFIGURATION.rar"
+      }
+    ]
+  },
+  {
+    "elementName": "Events and schedule December 2023",
+    "user": "r84237516",
+    "date": "2023-11-29T00:00:00.000Z",
+    "workArea": "HR",
+    "description": "These documents describe the upcoming event for the enterprise, for the end of the year (December) and also the first weeks of 2024.",
+    "files": [
+      {
+        "fileName": "1701322401597_Schedule 2024.xlsx"
+      },
+      {
+        "fileName": "1701322401597_Events December 2023.docx"
+      },
+      {
+        "fileName": "1701322401597_2023-2024 planning schedule.rar"
+      }
+    ]
+  },
+  {
+    "elementName": "Troubleshooting documents and guides FBB migration",
+    "user": "w26856766",
+    "date": "2023-11-30T05:40:50.578Z",
+    "workArea": "FBB",
+    "description": "Troubleshooting when making migration of devices that natively were from Cisco but now are going to be migrated to Huawei, the most common realistic situation and the solution for several examples of problems generated.",
+    "files": [
+      {
+        "fileName": "1701322921068_Troubleshoot your configuration in a Huawei device.pdf"
+      }
+    ]
+  },
+  {
+    "elementName": "Study guide exam 2023 mandatory to all new employees",
+    "user": "i84759157",
+    "date": "2023-11-06T00:00:00.000Z",
+    "workArea": "IT",
+    "description": "Study guide that all Huawei new employees should apply for being completed by the end of the year, starting from 11/27/2023 and the end day for completing 12/14/2023.",
+    "files": [
+      {
+        "fileName": "1701323109384_Study guide exam 2023.docx"
+      }
+    ]
+  },
+  {
+    "elementName": "Study guide for all new employees 2023 (RD/2023/AD/RESR)",
+    "user": "s84323766",
+    "date": "2023-11-27T00:00:00.000Z",
+    "workArea": "NFV",
+    "description": "Study guide for Huawei new employees that have never passed any exam from the mandatory ones that were assinged at the beggining of the contract.",
+    "files": [
+      {
+        "fileName": "1701323209285_Study guide exam 2023.docx"
+      },
+      {
+        "fileName": "1701323209286_Study guide remote delivery.pptx"
+      }
+    ]
+  },
+  {
+    "elementName": "Template for ticket query to GSCTicket",
+    "user": "a74585652",
+    "date": "2023-09-13T00:00:00.000Z",
+    "workArea": "GNOC",
+    "description": "Template in Word for generating a ticket CVR or UR for reporting to service desk at any hour reporting a problem in the service of any device or service that you are using, completing the form and sending the e-mail.",
+    "files": [
+      {
+        "fileName": "1701323313427_Template for ticket creation.docx"
+      }
+    ]
+  },
+  {
+    "elementName": "Top 3 for FBB-ON and RF",
+    "user": "w23412324",
+    "date": "2023-11-13T00:00:00.000Z",
+    "workArea": "IT",
+    "description": "Top 3 goals assigned to Fixed Broadband and RadioFrequency that is going to be reviewed by the PTL of each project related to both departments.",
+    "files": [
+      {
+        "fileName": "1701323706850_Top 3 FBB-ON.pptx"
+      },
+      {
+        "fileName": "1701323706853_Top 3 RadioFrequency.docx"
+      }
+    ]
+  },
+  {
+    "elementName": "Update for HIS platform",
+    "user": "p1558475",
+    "date": "2023-02-24T00:00:00.000Z",
+    "workArea": "IT",
+    "description": "Update the usage and virtual machines management applied to HIS platform for a better perfomance, differences and equivalents of the functionalities.",
+    "files": [
+      {
+        "fileName": "1701323887008_Updates November usage of HIS virtual machines.pptx"
+      }
+    ]
+  },
+  {
+    "elementName": "Configuration MBB Paraguay, migration Cisco to Huawei devices",
+    "user": "g51958462",
+    "date": "2023-04-12T00:00:00.000Z",
+    "workArea": "FBB",
+    "description": "MBB routine for device migration from Cisco to Huawei, tool for migration and troubleshooting when performing the migration.",
+    "files": [
+      {
+        "fileName": "1701324112272_Configuration MBB Paraguay.xlsx"
+      },
+      {
+        "fileName": "1701324112272_TOOL_FBB-IP_DEVICE_CONFIGURATION.rar"
+      }
+    ]
+  },
+  {
+    "elementName": "Employee Wellness Program 2023",
+    "user": "u73820945",
+    "date": "2023-12-10T00:00:00.000Z",
+    "workArea": "HR",
+    "description": "Information on the Employee Wellness Program for the year 2023, including fitness challenges, mental health support, and wellness activities.",
+    "files": [
+      {
+        "fileName": "1701325112341_Wellness Program Guide 2023.pdf"
+      },
+      {
+        "fileName": "1701325112341_Wellness Calendar 2023.xlsx"
+      }
+    ]
+  },
+  {
+    "elementName": "Network Security Best Practices",
+    "user": "k98765432",
+    "date": "2023-12-15T00:00:00.000Z",
+    "workArea": "IT",
+    "description": "A comprehensive guide outlining the best practices for ensuring network security, including tips, tools, and preventive measures.",
+    "files": [
+      {
+        "fileName": "1701325223456_Network_Security_Best_Practices.docx"
+      }
+    ]
+  },
+  {
+    "elementName": "Customer Service Training Materials",
+    "user": "m11223344",
+    "date": "2023-11-25T00:00:00.000Z",
+    "workArea": "CS",
+    "description": "Training materials for customer service representatives, covering communication skills, issue resolution, and maintaining a positive customer experience.",
+    "files": [
+      {
+        "fileName": "1701325345678_Customer_Service_Training_Module1.pptx"
+      },
+      {
+        "fileName": "1701325345679_Customer_Service_Training_Module2.docx"
+      }
+    ]
+  },
+  {
+    "elementName": "Project X Progress Report",
+    "user": "b56789123",
+    "date": "2023-11-30T00:00:00.000Z",
+    "workArea": "PM",
+    "description": "Detailed progress report for Project X, including milestones achieved, challenges faced, and upcoming tasks.",
+    "files": [
+      {
+        "fileName": "1701325456789_ProjectX_Progress_Report_November.pdf"
+      }
+    ]
+  },
+  {
+    "elementName": "New Employee Onboarding Handbook",
+    "user": "d98765432",
+    "date": "2023-12-05T00:00:00.000Z",
+    "workArea": "HR",
+    "description": "Comprehensive handbook for onboarding new employees, covering company policies, culture, and essential information for a successful integration.",
+    "files": [
+      {
+        "fileName": "1701325567890_Onboarding_Handbook_2023.docx"
+      }
+    ]
+  },
+  {
+    "elementName": "Web Development Workshop Materials",
+    "user": "x12345678",
+    "date": "2023-12-08T00:00:00.000Z",
+    "workArea": "IT",
+    "description": "Materials for a web development workshop, including slides, code samples, and hands-on exercises.",
+    "files": [
+      {
+        "fileName": "1701325678901_Web_Development_Workshop_Slides.pptx"
+      },
+      {
+        "fileName": "1701325678902_Web_Development_Workshop_Code_Samples.zip"
+      }
+    ]
+  },
+  {
+    "elementName": "Remote Work Policy Update 2023",
+    "user": "v11223344",
+    "date": "2023-12-20T00:00:00.000Z",
+    "workArea": "HR",
+    "description": "Updated remote work policy outlining guidelines, expectations, and support for employees working remotely in 2023.",
+    "files": [
+      {
+        "fileName": "1701326789012_Remote_Work_Policy_2023.pdf"
+      },
+      {
+        "fileName": "1701326789013_Remote_Work_Guidelines.docx"
+      }
+    ]
+  },
+  {
+    "elementName": "AI in Healthcare Workshop Materials",
+    "user": "z99887766",
+    "date": "2023-12-18T00:00:00.000Z",
+    "workArea": "IT",
+    "description": "Materials for a workshop on the application of artificial intelligence in healthcare, covering use cases, challenges, and future trends.",
+    "files": [
+      {
+        "fileName": "1701326890123_AI_Healthcare_Workshop_Slides.pptx"
+      },
+      {
+        "fileName": "1701326890124_AI_Healthcare_Use_Cases.docx"
+      }
+    ]
+  },
+  {
+    "elementName": "Cybersecurity Awareness Training",
+    "user": "p33445566",
+    "date": "2023-12-22T00:00:00.000Z",
+    "workArea": "IT",
+    "description": "Training materials for enhancing cybersecurity awareness among employees, covering best practices, threats, and preventive measures.",
+    "files": [
+      {
+        "fileName": "1701327001234_Cybersecurity_Awareness_Training.pdf"
+      }
+    ]
+  },
+  {
+    "elementName": "Product Launch Strategy 2023",
+    "user": "g11223344",
+    "date": "2023-12-25T00:00:00.000Z",
+    "workArea": "Marketing",
+    "description": "Strategic plan for launching new products in 2023, including market analysis, target audience, and promotional activities.",
+    "files": [
+      {
+        "fileName": "1701327112345_Product_Launch_Strategy_2023.pptx"
+      },
+      {
+        "fileName": "1701327112346_Target_Audience_Analysis.xlsx"
+      }
+    ]
+  },
+  {
+    "elementName": "Diversity and Inclusion Workshop",
+    "user": "l55667788",
+    "date": "2023-12-28T00:00:00.000Z",
+    "workArea": "HR",
+    "description": "Workshop materials promoting diversity and inclusion, addressing biases, and fostering an inclusive workplace culture.",
+    "files": [
+      {
+        "fileName": "1701327223456_Diversity_Inclusion_Workshop_Slides.pptx"
+      },
+      {
+        "fileName": "1701327223457_Inclusive_Workplace_Guide.docx"
+      }
+    ]
+  },
+  {
+    "elementName": "Financial Planning Seminar",
+    "user": "s11223344",
+    "date": "2023-12-30T00:00:00.000Z",
+    "workArea": "Finance",
+    "description": "Seminar materials on financial planning, covering budgeting, investment strategies, and retirement planning.",
+    "files": [
+      {
+        "fileName": "1701327334567_Financial_Planning_Seminar_Slides.pptx"
+      },
+      {
+        "fileName": "1701327334568_Retirement_Planning_Guide.pdf"
+      }
+    ]
+  },
+  {
+    "elementName": "Agile Project Management Handbook",
+    "user": "r55667788",
+    "date": "2023-12-31T00:00:00.000Z",
+    "workArea": "PM",
+    "description": "Comprehensive handbook on Agile project management, including principles, practices, and tools for effective project delivery.",
+    "files": [
+      {
+        "fileName": "1701327445678_Agile_Project_Management_Handbook.docx"
+      }
+    ]
+  },
+  {
+    "elementName": "Advanced Excel Techniques Workshop",
+    "user": "a11223344",
+    "date": "2023-12-16T00:00:00.000Z",
+    "workArea": "IT",
+    "description": "Workshop materials for advanced Excel techniques, including formulas, data analysis, and visualization tips.",
+    "files": [
+      {
+        "fileName": "1701327556789_Advanced_Excel_Workshop_Slides.pptx"
+      },
+      {
+        "fileName": "1701327556790_Excel_Formulas_Cheat_Sheet.xlsx"
+      }
+    ]
+  },
+  {
+    "elementName": "Green Initiatives Handbook",
+    "user": "g12345678",
+    "date": "2024-01-05T00:00:00.000Z",
+    "workArea": "CSR",
+    "description": "Handbook detailing the green initiatives and sustainability practices adopted by the company in 2024, promoting environmental responsibility.",
+    "files": [
+      {
+        "fileName": "1701327667890_Green_Initiatives_Handbook.pdf"
+      }
+    ]
+  },
+  {
+    "elementName": "Effective Time Management Workshop",
+    "user": "t99887766",
+    "date": "2024-01-08T00:00:00.000Z",
+    "workArea": "HR",
+    "description": "Materials for a workshop on effective time management, covering techniques, tools, and strategies for optimizing productivity.",
+    "files": [
+      {
+        "fileName": "1701327778901_Time_Management_Workshop_Slides.pptx"
+      },
+      {
+        "fileName": "1701327778902_Time_Management_Tips.docx"
+      }
+    ]
+  },
+  {
+    "elementName": "Cybersecurity Incident Response Plan",
+    "user": "c12345678",
+    "date": "2024-01-10T00:00:00.000Z",
+    "workArea": "IT",
+    "description": "Comprehensive incident response plan for addressing and mitigating cybersecurity incidents, ensuring a swift and effective response.",
+    "files": [
+      {
+        "fileName": "1701327889012_Cybersecurity_Incident_Response_Plan.docx"
+      }
+    ]
+  },
+  {
+    "elementName": "AI in Marketing Trends",
+    "user": "m55667788",
+    "date": "2024-01-15T00:00:00.000Z",
+    "workArea": "Marketing",
+    "description": "Insights into the latest trends and applications of artificial intelligence in marketing, exploring innovative strategies and tools.",
+    "files": [
+      {
+        "fileName": "1701327990123_AI_Marketing_Trends_Report.pdf"
+      }
+    ]
+  },
+  {
+    "elementName": "Employee Recognition Program Guidelines",
+    "user": "e11223344",
+    "date": "2024-01-18T00:00:00.000Z",
+    "workArea": "HR",
+    "description": "Guidelines for the employee recognition program, outlining criteria, rewards, and the nomination process for outstanding contributions.",
+    "files": [
+      {
+        "fileName": "1701328101234_Employee_Recognition_Guidelines.docx"
+      }
+    ]
+  },
+  {
+    "elementName": "Project Management Software Comparison",
+    "user": "p12345678",
+    "date": "2024-01-22T00:00:00.000Z",
+    "workArea": "PM",
+    "description": "Comparison of popular project management software, evaluating features, pricing, and user reviews to aid in informed decision-making.",
+    "files": [
+      {
+        "fileName": "1701328212345_Project_Management_Software_Comparison.xlsx"
+      }
+    ]
+  },
+  {
+    "elementName": "Effective Communication Skills Workshop",
+    "user": "c99887766",
+    "date": "2024-01-25T00:00:00.000Z",
+    "workArea": "HR",
+    "description": "Materials for a workshop focusing on enhancing effective communication skills in the workplace, covering verbal and written communication strategies.",
+    "files": [
+      {
+        "fileName": "1701328323456_Communication_Skills_Workshop_Slides.pptx"
+      },
+      {
+        "fileName": "1701328323457_Communication_Tips_Guide.docx"
+      }
+    ]
+  },
+  {
+    "elementName": "Agile Development Best Practices",
+    "user": "a55667788",
+    "date": "2024-01-28T00:00:00.000Z",
+    "workArea": "IT",
+    "description": "Best practices for implementing Agile development methodologies, improving collaboration, and delivering successful projects.",
+    "files": [
+      {
+        "fileName": "1701328434567_Agile_Development_Best_Practices.pdf"
+      }
+    ]
+  },
+  {
+    "elementName": "Employee Satisfaction Survey Results",
+    "user": "e11223344",
+    "date": "2024-01-30T00:00:00.000Z",
+    "workArea": "HR",
+    "description": "Analysis and presentation of results from the recent employee satisfaction survey, highlighting key findings and areas for improvement.",
+    "files": [
+      {
+        "fileName": "1701328545678_Employee_Satisfaction_Survey_Results.pdf"
+      }
+    ]
+  },
+  {
+    "elementName": "Data Privacy Compliance Training",
+    "user": "d55667788",
+    "date": "2024-02-05T00:00:00.000Z",
+    "workArea": "Legal",
+    "description": "Training materials for ensuring compliance with data privacy regulations, covering legal requirements and best practices.",
+    "files": [
+      {
+        "fileName": "1701328656789_Data_Privacy_Compliance_Training.pptx"
+      },
+      {
+        "fileName": "1701328656790_Data_Privacy_Legal_Requirements.docx"
+      }
+    ]
+  },
+  {
+    "elementName": "Health and Safety Guidelines 2024",
+    "user": "h99887766",
+    "date": "2024-02-08T00:00:00.000Z",
+    "workArea": "HR",
+    "description": "Updated health and safety guidelines for the workplace in 2024, ensuring a secure and healthy environment for all employees.",
+    "files": [
+      {
+        "fileName": "1701328767901_Health_Safety_Guidelines_2024.pdf"
+      }
+    ]
+  },
+  {
+    "elementName": "Social Media Marketing Trends Report",
+    "user": "m11223344",
+    "date": "2024-02-12T00:00:00.000Z",
+    "workArea": "Marketing",
+    "description": "Report on emerging trends in social media marketing, providing insights and strategies for effective online brand promotion.",
+    "files": [
+      {
+        "fileName": "1701328879012_Social_Media_Marketing_Trends_Report.pdf"
+      }
+    ]
+  },
+  {
+    "elementName": "Leadership Development Program Outline",
+    "user": "l55667788",
+    "date": "2024-02-15T00:00:00.000Z",
+    "workArea": "HR",
+    "description": "Outline for a leadership development program, including modules on leadership skills, team management, and decision-making.",
+    "files": [
+      {
+        "fileName": "1701328980123_Leadership_Development_Program_Outline.docx"
+      }
+    ]
+  },
+  {
+    "elementName": "New Product Prototype Showcase",
+    "user": "n99887766",
+    "date": "2024-02-18T00:00:00.000Z",
+    "workArea": "R&D",
+    "description": "Showcasing prototypes of upcoming products, inviting feedback and suggestions from teams across the organization.",
+    "files": [
+      {
+        "fileName": "1701329091234_Product_Prototype_Showcase_Photos.zip"
+      },
+      {
+        "fileName": "1701329091235_Feedback_Form_Template.docx"
+      }
+    ]
+  },
+  {
+    "elementName": "Employee Training Program Calendar",
+    "user": "e11223344",
+    "date": "2024-02-22T00:00:00.000Z",
+    "workArea": "HR",
+    "description": "Calendar outlining the schedule of employee training programs for the upcoming months, covering various skill development areas.",
+    "files": [
+      {
+        "fileName": "1701329202345_Employee_Training_Calendar_2024.xlsx"
+      }
+    ]
+  },
+  {
+    "elementName": "Mobile App Development Workshop",
+    "user": "m55667788",
+    "date": "2024-02-25T00:00:00.000Z",
+    "workArea": "IT",
+    "description": "Materials for a hands-on workshop on mobile app development, covering design principles, coding, and testing.",
+    "files": [
+      {
+        "fileName": "1701329313456_Mobile_App_Development_Workshop_Materials.zip"
+      }
+    ]
+  },
+  {
+    "elementName": "Project Kickoff Meeting Agenda",
+    "user": "p99887766",
+    "date": "2024-02-28T00:00:00.000Z",
+    "workArea": "PM",
+    "description": "Agenda for the kickoff meeting of a new project, outlining objectives, roles, and initial milestones.",
+    "files": [
+      {
+        "fileName": "1701329424567_Project_Kickoff_Meeting_Agenda.docx"
+      }
+    ]
+  }
+]
