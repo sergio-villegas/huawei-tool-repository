@@ -165,6 +165,15 @@ export class AppComponent {
 
   pageSize: number = 12;
   currentPage: number = 1;
+  selectedPageSize: number = 12;
+  inputPage: number = 1;
+
+  onPageSizeChange() {
+    this.pageSize = this.selectedPageSize;
+    this.currentPage = 1; // Reset to the first page when changing page size
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    this.performSearch(); // Update the displayed containers based on the new page size
+  }
 
   getItems(): Container[] {
     const startIndex = (this.currentPage - 1) * this.pageSize;
@@ -176,6 +185,7 @@ export class AppComponent {
   nextPage(): void {
     if (this.currentPage < this.totalPages()) {
       this.currentPage++;
+      this.inputPage = this.currentPage; // Update inputPage when navigating to the next page
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   }
@@ -183,20 +193,28 @@ export class AppComponent {
   prevPage(): void {
     if (this.currentPage > 1) {
       this.currentPage--;
+      this.inputPage = this.currentPage; // Update inputPage when navigating to the previous page
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
-    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
   
   totalPages(): number {
     return Math.ceil(this.filteredContainers.length / this.pageSize);
   }
 
-  inputPage: number = 1; // Initialize with a default value
-
   goToPage() {
     if (this.inputPage >= 1 && this.inputPage <= this.totalPages()) {
       this.currentPage = this.inputPage;
-      // Add logic to fetch data for the new page or update content accordingly
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      this.performSearch(); // Add logic to fetch data for the new page or update content accordingly
+    }
+  }
+  
+  updatePageAndView() {
+    if (this.inputPage >= 1 && this.inputPage <= this.totalPages()) {
+      this.currentPage = this.inputPage;
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      this.performSearch(); // Add logic to fetch data for the new page or update content accordingly
     }
   }
 

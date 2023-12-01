@@ -30,7 +30,7 @@
       <strong>Element Not Found</strong>
     </div>
     <div *ngFor="let container of (invertirOrden ? getItems().slice().reverse() : getItems()); let i = index"
-   class="container-huawei-repository-element-box">
+      class="container-huawei-repository-element-box">
       <h3 class="font" [ngClass]="{'multiline': container.elementName.length > 100}">
         {{ container.elementName }}
       </h3>
@@ -52,25 +52,33 @@
         </button>
       </div>
     </div>
-
   </div>
 
   <div *ngIf="!noResultsFound" class="pagination-container">
-    <button class="pagination-button" (click)="prevPage()" [disabled]="currentPage === 1">
-      Previous
-    </button>
+    <span style="margin-right: 5px;">Items</span>
+    <select class="page-size-dropdown" [(ngModel)]="selectedPageSize" (change)="onPageSizeChange()">
+      <option value="12">12</option>
+      <option value="24">24</option>
+      <option value="48">48</option>
+      <option value="96">96</option>
+    </select>
     <span>
       Page
       <input type="number" [(ngModel)]="inputPage" min="1" [max]="totalPages()" />
       of {{ totalPages() }}
     </span>
-    <button class="pagination-button-go" (click)="goToPage()">
+    <button class="pagination-button-go" (click)="updatePageAndView()">
       Go
+    </button>
+    <button class="pagination-button" (click)="prevPage()" [disabled]="currentPage === 1">
+      Previous
     </button>
     <button class="pagination-button" (click)="nextPage()" [disabled]="currentPage === totalPages()">
       Next
     </button>
   </div>
+  
+  
 
   <app-credit-section></app-credit-section>
 

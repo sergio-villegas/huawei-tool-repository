@@ -226,3 +226,23 @@ h3.font {
     background: linear-gradient(to right, transparent, #F5F5F5 75%);  // Fade effect
   }
 }
+
+.page-size-dropdown {
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  color: #333;
+  margin-right: 10px;
+}
+
+.page-size-dropdown:hover {
+  border-color: #666;
+}
+
+.page-size-dropdown:focus {
+  outline: none;
+  border-color: #4d90fe;
+  box-shadow: 0 0 5px rgba(77, 144, 254, 0.5);
+}
