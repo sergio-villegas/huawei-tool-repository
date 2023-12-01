@@ -30,7 +30,7 @@
       <strong>Element Not Found</strong>
     </div>
     <div *ngFor="let container of (invertirOrden ? getItems().slice().reverse() : getItems()); let i = index"
-      class="container-huawei-repository-element-box">
+   class="container-huawei-repository-element-box">
       <h3 class="font" [ngClass]="{'multiline': container.elementName.length > 100}">
         {{ container.elementName }}
       </h3>

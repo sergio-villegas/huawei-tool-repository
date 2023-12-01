@@ -55,7 +55,7 @@ export class AppComponent {
   rotateButtonState = 'normal';
   selectedFiles: File[] = [];
   searchTerm: string = '';
-  invertirOrden = false;
+  invertirOrden = true;
   animationState = 'in';
 
   ngOnInit() {
@@ -115,7 +115,7 @@ export class AppComponent {
           this.containers = data;
           this.updateFilteredContainers();
 
-          if (!this.invertirOrden) {
+          if (this.invertirOrden) {
             // Solo invertir si la lista está en estado normal
             this.invertirOrden = !this.invertirOrden;
             this.rotateButtonState = this.invertirOrden ? 'reversed' : 'normal';
@@ -169,7 +169,8 @@ export class AppComponent {
   getItems(): Container[] {
     const startIndex = (this.currentPage - 1) * this.pageSize;
     const endIndex = startIndex + this.pageSize;
-    return this.filteredContainers.slice(startIndex, endIndex);
+    const reversedArray = this.filteredContainers.slice().reverse();
+    return reversedArray.slice(startIndex, endIndex);
   }
 
   nextPage(): void {
